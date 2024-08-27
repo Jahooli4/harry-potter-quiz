@@ -8,14 +8,29 @@
     color: #333;
 }
 
+.container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+
+/* Main page title */
 
 .page-title {
     font-family: "MedievalSharp", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 5rem;
+    color: #eeba30;
+    -webkit-text-stroke: 1px black;
 }
 
+
+/* Level buttons */
 
 .level-options {
     height: 500px;
@@ -25,7 +40,7 @@
     padding: 20px;
 }
 
-
+/* Hero background image */
 
 #hero-image {
     background-image: url("/assets/images/hero-image.jpg");
@@ -39,9 +54,5 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-}
-
-#hero-image img {
-    
+    border-radius: 10px;
 }
