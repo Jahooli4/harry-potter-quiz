@@ -2,20 +2,20 @@
 
 
 
-* {
+/* * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
-}
+} */
 
-.container {
+/* .container {
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
-  }
+  } */
 
 
 /* Main page title */
@@ -55,4 +55,26 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+}
+
+
+/* Question page styling */
+
+#level-title {
+    margin: 30px;
+    color: purple;
+}
+
+#question-text{
+    padding: 20px;
+    color: yellow;
+    font-family:  "MedievalSharp", cursive;
+}
+
+.answer-container {
+    padding: 20px;
+}
+
+#question-page {
+    background-color: purple;
 }
