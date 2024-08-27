@@ -2,20 +2,23 @@
 
 
 
-/* * {
+* {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Old Standard TT", serif;
+    font-weight: 500;
+    font-style: normal;
     color: #333;
-} */
+    
+} 
 
-/* .container {
+.container {
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
-  } */
+  }
 
 
 /* Main page title */
@@ -27,6 +30,7 @@
     font-size: 5rem;
     color: #eeba30;
     -webkit-text-stroke: 1px black;
+    padding: 15px;
 }
 
 
@@ -60,21 +64,33 @@
 
 /* Question page styling */
 
+.game-page {
+    background-color: rgb(96, 5, 96);
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    height: 500px;
+    border-radius: 25px;
+  }
+
 #level-title {
-    margin: 30px;
-    color: purple;
+    color: white;
+    font-family: "MedievalSharp", cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 20px;
 }
 
 #question-text{
     padding: 20px;
     color: yellow;
-    font-family:  "MedievalSharp", cursive;
 }
 
 .answer-container {
     padding: 20px;
 }
 
-#question-page {
-    background-color: purple;
+.answer-container button {
+    padding: 20px;
+    margin: 10px;
 }
