@@ -1,13 +1,13 @@
 const home = document.getElementById("home-page");
 
-const question = document.getElementById("question-text");
-const choices = Array.from(document.getElementsByClassName("choice-text"));
+const question = document.getElementById('question-text');
+const choices = Array.from(document.getElementsByClassName('choice-text'));
 
 let currentQuestion = {};
-let acceptingAnsers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableQuestioms = [];
+let availableQuestions = [];
 
 let questions = [
     {
@@ -16,7 +16,7 @@ let questions = [
         choice2: "Gryffindor",
         choice3: "Hufflepuff",
         choice4: "Ravenclaw",
-        answer: 2
+        answer: 2,
     },
     {
         question: "The juice of which fruit or vegetable is commonly served at Hogwarts?",
@@ -24,7 +24,7 @@ let questions = [
         choice2: "Cucumber",
         choice3: "Orange",
         choice4: "Pumpkin",
-        answer: 4
+        answer: 4,
     },
     {
         question: "Neville Longbottom can often be found looking for what sort of pet?",
@@ -32,7 +32,7 @@ let questions = [
         choice2: "Dog",
         choice3: "Rat",
         choice4: "Toad",
-        answer: 4
+        answer: 4,
     },
     {
         question: "Ron Weasley is very good at which game?",
@@ -40,7 +40,7 @@ let questions = [
         choice2: "Scrabble",
         choice3: "Chess",
         choice4: "Boggle",
-        answer: 3
+        answer: 3,
     },
     {
         question: "Hermione's parents are described as what?",
@@ -48,7 +48,7 @@ let questions = [
         choice2: "Muggles",
         choice3: "Old",
         choice4: "Gnomes",
-        answer: 2
+        answer: 2,
     },
     {
         question: "What sort of pet has Hagrid always wanted?",
@@ -56,7 +56,7 @@ let questions = [
         choice2: "A spider",
         choice3: "A unicorn",
         choice4: "A dragon",
-        answer: 4
+        answer: 4,
     },
     {
         question: "Professor Snape is head of which Hogwarts house?",
@@ -64,7 +64,7 @@ let questions = [
         choice2: "Gryffindor",
         choice3: "Ravenclaw",
         choice4: "Hufflepuff",
-        answer: 1
+        answer: 1,
     },
     {
         question: "Professor Quirrell wears what sort of headwear?",
@@ -72,7 +72,7 @@ let questions = [
         choice2: "A bonnet",
         choice3: "A turban",
         choice4: "A swimming cap",
-        answer: 3
+        answer: 3,
     },
     {
         question: "Harry can talk to what kind of animals?",
@@ -80,7 +80,7 @@ let questions = [
         choice2: "Cats",
         choice3: "Dolphins",
         choice4: "Crows",
-        answer: 1
+        answer: 1,
     },
     {
         question: "What sort of creature is Dobby?",
@@ -88,6 +88,34 @@ let questions = [
         choice2: "Gnome",
         choice3: "House elf",
         choice4: "Dementor",
-        answer: 3
+        answer: 3,
     },
-]
+];
+
+const correctAnswerPoints = 1;
+const maxQuestions = 6;
+
+
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    console.log(availableQuestions);
+    getNewQuestion();
+};
+
+getNewQuestion = () => {
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
+
+    choices.forEach((choice) => {
+        const number = choice.dataset["number"];
+        choice.innerText = currentQuestion["choice" + number];
+    })
+    availableQuesions.splice(questionIndex, 1);
+    acceptingAnswers = true;
+};
+
+startGame();
