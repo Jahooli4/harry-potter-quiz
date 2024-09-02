@@ -1,7 +1,14 @@
 const home = document.getElementById("home-page");
+const quizPage = document.getElementById("quiz-page");
 
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
+
+
+// Level selection buttons
+const easyBtn = document.getElementById("easy");
+const mediumBtn = document.getElementById("medium");
+const hardBtn = document.getElementById("hard");
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -96,6 +103,16 @@ const correctAnswerPoints = 1;
 const maxQuestions = 6;
 
 
+// Function to show quiz page and hide homepage when a level is selected
+function showQuiz() {
+    home.style.display = "none";
+    quizPage.style.display ="block";
+}
+
+
+
+
+// function to start the game from the beginning, resets score and question counter
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -104,6 +121,9 @@ startGame = () => {
     getNewQuestion();
 };
 
+
+
+// Function to select a random question + choices from the questions array
 getNewQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -114,8 +134,21 @@ getNewQuestion = () => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number];
     })
-    availableQuesions.splice(questionIndex, 1);
+    availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
+
+
+// Function to add an event listener every time an answer is clicked 
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if (!acceptingAnswers) return;
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
+        console.log(selectedAnswer);
+        getNewQuestion();
+    });
+});
 
 startGame();
