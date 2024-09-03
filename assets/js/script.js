@@ -5,6 +5,8 @@ const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 
 
+
+
 // Level selection buttons
 const easyBtn = document.getElementById("easy");
 const mediumBtn = document.getElementById("medium");
@@ -99,7 +101,7 @@ let questions = [{
 ];
 
 const correctAnswerPoints = 1;
-const maxQuestions = 6;
+const maxQuestions = 10;
 
 
 // Function to show quiz page and hide homepage when a level is selected
@@ -138,12 +140,10 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
-
-function rightAnswer() {
-    if (selectedAnswer === currentQuestion.answer) {
-        alert("Well done!");
-    }
-}
+// Function to increment the score value during the quiz
+function incrementScore() {
+    document.getElementById("score").innerHTML = `Score: ${score}/${questions.length}`;
+};
 
 // Function to add an event listener every time an answer is clicked 
 choices.forEach(choice => {
@@ -153,16 +153,16 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
         if (selectedAnswer == currentQuestion.answer) {
-            alert("Well done, that's the right answer!")
+            alert("Well done, that's the right answer!");
+            score++;
         } else {
             alert("Oops that's not quite right")
         };
+        incrementScore();
         getNewQuestion();
     });
 });
 
-function incrementScore() {
 
-}
 
 startGame();

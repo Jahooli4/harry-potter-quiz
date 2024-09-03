@@ -97,7 +97,14 @@
     margin: 10px;
 }
 
-.score {
+#score {
     color: white;
     padding: 20px;
+}
+
+/* Correct/incorrect answer button styling */
+
+.correct {
+    color: white;
+    background-color: green;
 }

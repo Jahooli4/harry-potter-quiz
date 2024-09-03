@@ -29,12 +29,14 @@
 
 <body>
 
-
+<!-- Game Title ------------------------>
     <div class="row text-center">
         <div class="col align-self-center">
             <a href="index.html" class="text-decoration-none"><h1 class="page-title">Harry Potter Quiz</h1></a>
         </div>
     </div>
+
+<!-- Homepage section ------------------------>
     <div id="home-page">
         <div id="hero-image">
             <div class="container text-center">
@@ -53,6 +55,8 @@
         </div>
     </div>
 
+
+<!-- Quiz section ------------------------>
     <div id="quiz-page" class="text-center game-page">
         <div class="row">
             <div class="col">
@@ -64,7 +68,18 @@
                         <button type="buttom" data-number="3" class="btn btn-lg btn-outline-danger choice-text">Choice 3</button>
                         <button type="buttom" data-number="4" class="btn btn-lg btn-outline-warning choice-text">Choice 4</button>
                     </div>
-                    <h4 class="score">Score: 0/0</h4>
+                    <h4 id="score">Score: 0/0</h4>
+            </div>
+        </div>
+
+
+    <!-- Endgame section ------------------------>
+    <div id="end-game-page" class="text-center">
+        <div class="row">
+            <div class="col">
+                <h2 id="finish-message"></h2>
+                
+                <h3 id="total-score"></h3>
             </div>
         </div>
 
