@@ -1,5 +1,6 @@
 const home = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
+const endGamePage = document.getElementById("end-game-page");
 
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
@@ -145,6 +146,11 @@ function incrementScore() {
     document.getElementById("score").innerHTML = `Score: ${score}/${questions.length}`;
 };
 
+// Function to display endgame message and total score once the quiz is complete
+
+
+
+
 // Function to add an event listener every time an answer is clicked 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
@@ -162,6 +168,7 @@ choices.forEach(choice => {
         getNewQuestion();
     });
 });
+
 
 
 
