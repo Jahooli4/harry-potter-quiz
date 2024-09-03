@@ -16,8 +16,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-    {
+let questions = [{
         question: "In which Hogwarts house is Harry Potter?",
         choice1: "Slytherin",
         choice2: "Gryffindor",
@@ -106,10 +105,11 @@ const maxQuestions = 6;
 // Function to show quiz page and hide homepage when a level is selected
 function showQuiz() {
     home.style.display = "none";
-    quizPage.style.display ="block";
+    quizPage.style.display = "block";
 }
 
-
+// Displays the quiz page when level button is clicked
+easy.addEventListener("click", showQuiz);
 
 
 // function to start the game from the beginning, resets score and question counter
@@ -139,6 +139,12 @@ getNewQuestion = () => {
 };
 
 
+function rightAnswer() {
+    if (selectedAnswer === currentQuestion.answer) {
+        alert("Well done!");
+    }
+}
+
 // Function to add an event listener every time an answer is clicked 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
@@ -146,9 +152,17 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        console.log(selectedAnswer);
+        if (selectedAnswer == currentQuestion.answer) {
+            alert("Well done, that's the right answer!")
+        } else {
+            alert("Oops that's not quite right")
+        };
         getNewQuestion();
     });
 });
+
+function incrementScore() {
+
+}
 
 startGame();
