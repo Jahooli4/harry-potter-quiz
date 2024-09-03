@@ -21,10 +21,10 @@ let availableQuestions = [];
 
 let questions = [{
         question: "In which Hogwarts house is Harry Potter?",
-        choice1: "Slytherin",
-        choice2: "Gryffindor",
-        choice3: "Hufflepuff",
-        choice4: "Ravenclaw",
+        choice1: "Ravenclaw",
+        choice2: "Slytherin",
+        choice3: "Gryffindor",
+        choice4: "Hufflepuff",
         answer: 2,
     },
     {
@@ -69,9 +69,9 @@ let questions = [{
     },
     {
         question: "Professor Snape is head of which Hogwarts house?",
-        choice1: "Slytherin",
-        choice2: "Gryffindor",
-        choice3: "Ravenclaw",
+        choice1: "Ravenclaw",
+        choice2: "Slytherin",
+        choice3: "Gryffindor",
         choice4: "Hufflepuff",
         answer: 1,
     },
@@ -108,6 +108,7 @@ const maxQuestions = 10;
 // Function to show quiz page and hide homepage when a level is selected
 function showQuiz() {
     home.style.display = "none";
+    endGamePage.style.display = "none";
     quizPage.style.display = "block";
 }
 
@@ -124,7 +125,14 @@ startGame = () => {
     getNewQuestion();
 };
 
-
+// Function to display endgame message and total score once the quiz is complete
+function endGame() {
+    if (maxQuestions == questionCounter) {
+        home.style.display = "none";
+        endGamePage.style.display = "block";
+        quizPage.style.display = "none";
+    }
+}
 
 // Function to select a random question + choices from the questions array
 getNewQuestion = () => {
@@ -139,15 +147,16 @@ getNewQuestion = () => {
     })
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
+
+    if (questions.length == maxQuestions) {
+        endGame();
+    }
 };
 
 // Function to increment the score value during the quiz
 function incrementScore() {
     document.getElementById("score").innerHTML = `Score: ${score}/${questions.length}`;
 };
-
-// Function to display endgame message and total score once the quiz is complete
-
 
 
 
