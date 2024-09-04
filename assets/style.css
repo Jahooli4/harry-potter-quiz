@@ -114,6 +114,7 @@
 
 /* End game page to display finish message and total score */
 #end-game-page {
+    display: none;
     background-color: #eeba30;
     color: purple;
     width: 80%;

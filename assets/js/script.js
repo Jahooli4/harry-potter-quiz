@@ -13,6 +13,9 @@ const easyBtn = document.getElementById("easy");
 const mediumBtn = document.getElementById("medium");
 const hardBtn = document.getElementById("hard");
 
+// Play again button
+const playAgainBtn = document.getElementById("play-again-btn");
+
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -118,6 +121,8 @@ function showQuiz() {
 // Displays the quiz page when level button is clicked
 easy.addEventListener("click", showQuiz);
 
+// playAgainBtn.addEventListener("click");
+
 
 // function to start the game from the beginning, resets score and question counter
 startGame = () => {
@@ -130,11 +135,9 @@ startGame = () => {
 
 // Function to display endgame message and total score once the quiz is complete
 function endGame() {
-    if (maxQuestions == questionCounter) {
         home.style.display = "none";
         quizPage.style.display = "none";
         endGamePage.style.display = "block";
-    };
     finalScore.innerText = `You scored ${score}/${questions.length}`;
     if (score <= 4) {
         finishMessage.innerText = "It looks like someone needs extra tutoring..."
@@ -147,6 +150,9 @@ function endGame() {
 
 // Function to select a random question + choices from the questions array
 getNewQuestion = () => {
+    if (availableQuestions.length === 0) {
+        endGame();
+    } else {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -158,10 +164,7 @@ getNewQuestion = () => {
     });
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
-
-    if (questions.length == maxQuestions) {
-        endGame();
-    };
+};
 };
 
 // Function to increment the score value during the quiz
