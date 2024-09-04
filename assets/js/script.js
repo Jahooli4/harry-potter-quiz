@@ -25,7 +25,7 @@ let questions = [{
         choice2: "Slytherin",
         choice3: "Gryffindor",
         choice4: "Hufflepuff",
-        answer: 2,
+        answer: 3,
     },
     {
         question: "The juice of which fruit or vegetable is commonly served at Hogwarts?",
@@ -73,7 +73,7 @@ let questions = [{
         choice2: "Slytherin",
         choice3: "Gryffindor",
         choice4: "Hufflepuff",
-        answer: 1,
+        answer: 2,
     },
     {
         question: "Professor Quirrell wears what sort of headwear?",
@@ -104,6 +104,9 @@ let questions = [{
 const correctAnswerPoints = 1;
 const maxQuestions = 10;
 
+let finishMessage = document.getElementById("finish-message");
+let finalScore = document.getElementById("total-score");
+
 
 // Function to show quiz page and hide homepage when a level is selected
 function showQuiz() {
@@ -129,10 +132,18 @@ startGame = () => {
 function endGame() {
     if (maxQuestions == questionCounter) {
         home.style.display = "none";
-        endGamePage.style.display = "block";
         quizPage.style.display = "none";
-    }
-}
+        endGamePage.style.display = "block";
+    };
+    finalScore.innerText = `You scored ${score}/${questions.length}`;
+    if (score <= 4) {
+        finishMessage.innerText = "It looks like someone needs extra tutoring..."
+    } else if (score <= 6) {
+        finishMessage.innerText = "Not bad, not bad, but a but of extra studying wouldn't hurt!"
+    } else {
+        finishMessage.innerText = "Well done, you really do know your way around the wizarding world!"
+    };
+};
 
 // Function to select a random question + choices from the questions array
 getNewQuestion = () => {
@@ -144,13 +155,13 @@ getNewQuestion = () => {
     choices.forEach((choice) => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number];
-    })
+    });
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 
     if (questions.length == maxQuestions) {
         endGame();
-    }
+    };
 };
 
 // Function to increment the score value during the quiz

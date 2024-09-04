@@ -70,9 +70,6 @@
 
 #quiz-page {
     display: none;
-}
-
-.game-page {
     background-color: rgb(96, 5, 96);
     width: 80%;
     margin: auto;
@@ -117,7 +114,6 @@
 
 /* End game page to display finish message and total score */
 #end-game-page {
-    display: block;
     background-color: #eeba30;
     color: purple;
     width: 80%;
