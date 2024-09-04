@@ -51,7 +51,7 @@
 /* Hero background image */
 
 #hero-image {
-    background-image: url("assets/images/hero-image.jpg");
+    background-image: url("/assets/images/hero-image.jpg");
     height: 500px;
     overflow: hidden;
     width: 80%;
