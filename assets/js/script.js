@@ -121,7 +121,6 @@ function showQuiz() {
 // Displays the quiz page when level button is clicked
 easy.addEventListener("click", showQuiz);
 
-// playAgainBtn.addEventListener("click");
 
 
 // function to start the game from the beginning, resets score and question counter
@@ -174,23 +173,27 @@ function incrementScore() {
 
 
 
-// Function to add an event listener every time an answer is clicked 
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
+// Function to add an event listener every time an answer is clicked (learned from Jack Quick on Youtube)
+choices.forEach(function(choice) {
+    choice.addEventListener('click', function(event) {
         if (!acceptingAnswers) return;
         acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
+
+        const selectedChoice = event.target;
+        const selectedAnswer = selectedChoice.getAttribute('data-number');
+
         if (selectedAnswer == currentQuestion.answer) {
             alert("Well done, that's the right answer!");
             score++;
         } else {
-            alert("Oops that's not quite right")
-        };
+            alert("Oops that's not quite right");
+        }
+
         incrementScore();
         getNewQuestion();
     });
 });
+
 
 
 
