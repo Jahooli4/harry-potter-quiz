@@ -34,7 +34,10 @@
 }
 
 
-
+#home-page {
+    display: block;
+    height: 500px;
+}
 
 
 

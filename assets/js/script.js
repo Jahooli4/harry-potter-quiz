@@ -22,7 +22,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [{
+let easyQuestions = [{
         question: "In which Hogwarts house is Harry Potter?",
         choice1: "Ravenclaw",
         choice2: "Slytherin",
@@ -118,26 +118,37 @@ function showQuiz() {
     quizPage.style.display = "block";
 }
 
+
+
 // Displays the quiz page when level button is clicked
-easy.addEventListener("click", showQuiz);
+
+easyBtn.addEventListener("click", showQuiz);
+
+easyBtn.addEventListener("click", startEasyGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...easyQuestions];
+    getNewQuestion();
+});
 
 
 
 // function to start the game from the beginning, resets score and question counter
-startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    console.log(availableQuestions);
-    getNewQuestion();
-};
+// startEasyGame = () => {
+//     questionCounter = 0;
+//     score = 0;
+//     availableQuestions = [...easyQuestions];
+//     getNewQuestion();
+// };
+
+
 
 // Function to display endgame message and total score once the quiz is complete
 function endGame() {
-        home.style.display = "none";
-        quizPage.style.display = "none";
-        endGamePage.style.display = "block";
-    finalScore.innerText = `You scored ${score}/${questions.length}`;
+    home.style.display = "none";
+    quizPage.style.display = "none";
+    endGamePage.style.display = "block";
+    finalScore.innerText = `You scored ${score}/${easyQuestions.length}`;
     if (score <= 4) {
         finishMessage.innerText = "It looks like someone needs extra tutoring..."
     } else if (score <= 6) {
@@ -147,35 +158,35 @@ function endGame() {
     };
 };
 
-// Function to select a random question + choices from the questions array
+// Function to select a random question + choices from the easyQuestions array
 getNewQuestion = () => {
     if (availableQuestions.length === 0) {
         endGame();
     } else {
-    questionCounter++;
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+        questionCounter++;
+        const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+        currentQuestion = availableQuestions[questionIndex];
+        question.innerText = currentQuestion.question;
 
-    choices.forEach((choice) => {
-        const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number];
-    });
-    availableQuestions.splice(questionIndex, 1);
-    acceptingAnswers = true;
-};
+        choices.forEach((choice) => {
+            const number = choice.dataset["number"];
+            choice.innerText = currentQuestion["choice" + number];
+        });
+        availableQuestions.splice(questionIndex, 1);
+        acceptingAnswers = true;
+    };
 };
 
 // Function to increment the score value during the quiz
 function incrementScore() {
-    document.getElementById("score").innerHTML = `Score: ${score}/${questions.length}`;
+    document.getElementById("score").innerHTML = `Score: ${score}/${easyQuestions.length}`;
 };
 
 
 
 // Function to add an event listener every time an answer is clicked (learned from Jack Quick on Youtube)
-choices.forEach(function(choice) {
-    choice.addEventListener('click', function(event) {
+choices.forEach(function (choice) {
+    choice.addEventListener('click', function (event) {
         if (!acceptingAnswers) return;
         acceptingAnswers = false;
 
@@ -198,4 +209,4 @@ choices.forEach(function(choice) {
 
 
 
-startGame();
+startEasyGame();
