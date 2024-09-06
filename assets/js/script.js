@@ -12,7 +12,7 @@ const levelTitle = document.getElementById('level-title');
 // Level selection buttons
 const easyBtn = document.getElementById("easy");
 const mediumBtn = document.getElementById("medium");
-const hardBtn = document.getElementById("hard");
+const difficultBtn = document.getElementById("difficult");
 
 // Play again button
 const playAgainBtn = document.getElementById("play-again-btn");
@@ -189,6 +189,90 @@ let mediumQuestions = [{
 },
 ];
 
+
+// Questions for the difficult level
+let difficultQuestions = [{
+    question: "Harry's patronus takes what form?",
+    choice1: "A goat",
+    choice2: "A stag",
+    choice3: "A moose",
+    choice4: "A doe",
+    answer: 2,
+},
+{
+    question: "What is the Hogwarts poltergeist called?",
+    choice1: "Peeves",
+    choice2: "Peter",
+    choice3: "Pesky",
+    choice4: "Pablo",
+    answer: 1,
+},
+{
+    question: "What is the name of Voldemort's father?",
+    choice1: "Tony Riddle",
+    choice2: "Tom Riddle",
+    choice3: "Ted Riddle",
+    choice4: "Tim Riddle",
+    answer: 2,
+},
+{
+    question: "Which quidditch team does Viktor Krum play for?",
+    choice1: "Romania",
+    choice2: "Hungary",
+    choice3: "Serbia",
+    choice4: "Bulgaria",
+    answer: 4,
+},
+{
+    question: "What was Sirius Black's nickname at Hogwarts?",
+    choice1: "Moony",
+    choice2: "Padfoot",
+    choice3: "Prongs",
+    choice4: "Wormtail",
+    answer: 2,
+},
+{
+    question: "Which spell would you use to summon an object?",
+    choice1: "Lumos",
+    choice2: "Reparo",
+    choice3: "Episkey",
+    choice4: "Accio",
+    answer: 4,
+},
+{
+    question: "Fred and George Weasley play which positions on the Hogwarts quidditch team?",
+    choice1: "Chasers",
+    choice2: "Keepers",
+    choice3: "Beaters",
+    choice4: "They aren't on the team!",
+    answer: 3,
+},
+{
+    question: "Ron's pet rat turns out to be who?",
+    choice1: "Peter Pettigrew",
+    choice2: "Pansy Parkinson",
+    choice3: "Sirius Black",
+    choice4: "Padma Patil",
+    answer: 1,
+},
+{
+    question: "In The Goblet of Fire, Snape wrongly accuses HArry of stealing what from him?",
+    choice1: "Money",
+    choice2: "Gillyweed",
+    choice3: "Veritaserum",
+    choice4: "Polyjuice potion ingredients",
+    answer: 4,
+},
+{
+    question: "Professor Karkaroff used to be what?",
+    choice1: "A werewolf",
+    choice2: "A deatheater",
+    choice3: "A Horwarts student",
+    choice4: "An auror",
+    answer: 2,
+},
+];
+
 const correctAnswerPoints = 1;
 const maxQuestions = 10;
 
@@ -234,6 +318,21 @@ mediumBtn.addEventListener("click", startMediumGame = () => {
 });
 
 
+// Displays the quiz page when the difficult level button is clicked
+
+difficultBtn.addEventListener("click", showQuiz);
+
+// // function to start the game from the beginning, resets score and question 
+// counter and pulls questions from the DIFFICULT array
+difficultBtn.addEventListener("click", startDifficultGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...difficultQuestions];
+    getNewQuestion();
+    levelTitle.innerText = "Level: DIFFICULT";
+});
+
+
 
 
 
@@ -242,11 +341,11 @@ function endGame() {
     home.style.display = "none";
     quizPage.style.display = "none";
     endGamePage.style.display = "block";
-    finalScore.innerText = `You scored ${score}/${easyQuestions.length}`;
+    finalScore.innerText = `You scored ${score}/${questionCounter}`;
     if (score <= 4) {
         finishMessage.innerText = "It looks like someone needs extra tutoring..."
     } else if (score <= 6) {
-        finishMessage.innerText = "Not bad, not bad, but a but of extra studying wouldn't hurt!"
+        finishMessage.innerText = "Not bad, not bad, but a bit of extra studying wouldn't hurt!"
     } else {
         finishMessage.innerText = "Well done, you really do know your way around the wizarding world!"
     };
@@ -273,7 +372,7 @@ getNewQuestion = () => {
 
 // Function to increment the score value during the quiz
 function incrementScore() {
-    document.getElementById("score").innerHTML = `Score: ${score}/${easyQuestions.length}`;
+    document.getElementById("score").innerHTML = `Score: ${score}/${questionCounter}`;
 };
 
 
