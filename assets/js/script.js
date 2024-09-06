@@ -4,6 +4,7 @@ const endGamePage = document.getElementById("end-game-page");
 
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
+const levelTitle = document.getElementById('level-title');
 
 
 
@@ -208,27 +209,31 @@ function showQuiz() {
 
 easyBtn.addEventListener("click", showQuiz);
 
-// function to start the game from the beginning, resets score and question counter
+// function to start the game from the beginning, resets score and question 
+// counter and pulls from the EASY QUESTIONS array
 easyBtn.addEventListener("click", startEasyGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...easyQuestions];
     getNewQuestion();
+    levelTitle.innerText = "Level: EASY";
 });
 
 // Displays the quiz page when the medium level button is clicked
 
 mediumBtn.addEventListener("click", showQuiz);
 
+// // function to start the game from the beginning, resets score and question 
+// counter and pulls questions from the MEDIUM array
+mediumBtn.addEventListener("click", startMediumGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...mediumQuestions];
+    getNewQuestion();
+    levelTitle.innerText = "Level: MEDIUM";
+});
 
 
-
-// startEasyGame = () => {
-//     questionCounter = 0;
-//     score = 0;
-//     availableQuestions = [...easyQuestions];
-//     getNewQuestion();
-// };
 
 
 
