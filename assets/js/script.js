@@ -22,6 +22,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+// Questions for the easy level
 let easyQuestions = [{
         question: "In which Hogwarts house is Harry Potter?",
         choice1: "Ravenclaw",
@@ -104,6 +105,89 @@ let easyQuestions = [{
     },
 ];
 
+// Questions for the medium level
+let mediumQuestions = [{
+    question: "Harry's patronus takes what form?",
+    choice1: "A goat",
+    choice2: "A stag",
+    choice3: "A moose",
+    choice4: "A doe",
+    answer: 2,
+},
+{
+    question: "What is the Hogwarts poltergeist called?",
+    choice1: "Peeves",
+    choice2: "Peter",
+    choice3: "Pesky",
+    choice4: "Pablo",
+    answer: 1,
+},
+{
+    question: "What is the name of Voldemort's father?",
+    choice1: "Tony Riddle",
+    choice2: "Tom Riddle",
+    choice3: "Ted Riddle",
+    choice4: "Tim Riddle",
+    answer: 2,
+},
+{
+    question: "Which quidditch team does Viktor Krum play for?",
+    choice1: "Romania",
+    choice2: "Hungary",
+    choice3: "Serbia",
+    choice4: "Bulgaria",
+    answer: 4,
+},
+{
+    question: "What was Sirius Black's nickname at Hogwarts?",
+    choice1: "Moony",
+    choice2: "Padfoot",
+    choice3: "Prongs",
+    choice4: "Wormtail",
+    answer: 2,
+},
+{
+    question: "Which spell would you use to summon an object?",
+    choice1: "Lumos",
+    choice2: "Reparo",
+    choice3: "Episkey",
+    choice4: "Accio",
+    answer: 4,
+},
+{
+    question: "Fred and George Weasley play which positions on the Hogwarts quidditch team?",
+    choice1: "Chasers",
+    choice2: "Keepers",
+    choice3: "Beaters",
+    choice4: "They aren't on the team!",
+    answer: 3,
+},
+{
+    question: "Ron's pet rat turns out to be who?",
+    choice1: "Peter Pettigrew",
+    choice2: "Pansy Parkinson",
+    choice3: "Sirius Black",
+    choice4: "Padma Patil",
+    answer: 1,
+},
+{
+    question: "In The Goblet of Fire, Snape wrongly accuses HArry of stealing what from him?",
+    choice1: "Money",
+    choice2: "Gillyweed",
+    choice3: "Veritaserum",
+    choice4: "Polyjuice potion ingredients",
+    answer: 4,
+},
+{
+    question: "Professor Karkaroff used to be what?",
+    choice1: "A werewolf",
+    choice2: "A deatheater",
+    choice3: "A Horwarts student",
+    choice4: "An auror",
+    answer: 2,
+},
+];
+
 const correctAnswerPoints = 1;
 const maxQuestions = 10;
 
@@ -120,7 +204,7 @@ function showQuiz() {
 
 
 
-// Displays the quiz page when level button is clicked
+// Displays the quiz page when the easy level button is clicked
 
 easyBtn.addEventListener("click", showQuiz);
 
@@ -131,6 +215,10 @@ easyBtn.addEventListener("click", startEasyGame = () => {
     availableQuestions = [...easyQuestions];
     getNewQuestion();
 });
+
+// Displays the quiz page when the medium level button is clicked
+
+mediumBtn.addEventListener("click", showQuiz);
 
 
 
