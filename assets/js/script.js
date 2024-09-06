@@ -124,6 +124,7 @@ function showQuiz() {
 
 easyBtn.addEventListener("click", showQuiz);
 
+// function to start the game from the beginning, resets score and question counter
 easyBtn.addEventListener("click", startEasyGame = () => {
     questionCounter = 0;
     score = 0;
@@ -133,7 +134,7 @@ easyBtn.addEventListener("click", startEasyGame = () => {
 
 
 
-// function to start the game from the beginning, resets score and question counter
+
 // startEasyGame = () => {
 //     questionCounter = 0;
 //     score = 0;
