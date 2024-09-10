@@ -115,13 +115,18 @@
 
 .answer-container {
     padding: 20px;
+    
+}
+
+.button-container {
     margin: auto;
+    padding: 10px;
 }
 
 .answer-container button {
     padding: 20px;
     margin: auto;
-    width: 80%;
+    
     
 }
 
