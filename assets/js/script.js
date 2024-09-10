@@ -377,7 +377,7 @@ function incrementScore() {
 
 
 
-// Function to add an event listener every time an answer is clicked (learned from Jack Quick on Youtube)
+// Function to add an event listener every time an answer is clicked
 choices.forEach(function (choice) {
     choice.addEventListener('click', function (event) {
         if (!acceptingAnswers) return;
@@ -386,13 +386,13 @@ choices.forEach(function (choice) {
         const selectedChoice = event.target;
         const selectedAnswer = selectedChoice.getAttribute('data-number');
 
+// if function that displays an alert for right and wrong answers
         if (selectedAnswer == currentQuestion.answer) {
             alert("Well done, that's the right answer!");
             score++;
         } else {
             alert("Oops that's not quite right");
-        }
-
+        };
         incrementScore();
         getNewQuestion();
     });

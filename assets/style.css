@@ -57,14 +57,14 @@
 }
 
 
-.level-options {
+/* .level-options {
     height: 100px;
 }
 
 
 .select-level-text-container {
     height: 400px;
-}
+} */
 
 
 .level-option-buttons {
@@ -115,6 +115,7 @@
 
 .answer-container {
     padding: 20px;
+    background-color: none;
     
 }
 
@@ -123,20 +124,18 @@
     padding: 10px;
 }
 
+
+
 .answer-container button {
     padding: 20px;
-    margin: auto;
-    
-    
+    margin: auto; 
+    width: 80%;
 }
 
 #score {
     color: white;
     padding: 20px;
 }
-
-/* Correct/incorrect answer button styling */
-
 
 
 /* End game page to display finish message and total score */
