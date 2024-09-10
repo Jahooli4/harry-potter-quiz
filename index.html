@@ -49,13 +49,13 @@
                     </div>
                 </div>
                 <div class="row level-options align-items-end">
-                    <div class="col-4 level-option-buttons">
+                    <div class="col-12 col-lg-4 level-option-buttons">
                         <button type="button" class="btn btn-lg btn-warning" id="easy">EASY</button>
                     </div>
-                    <div class="col-4 level-option-buttons">
+                    <div class="col-12 col-lg-4 level-option-buttons">
                         <button type="button" class="btn btn-lg btn-primary" id="medium">MEDIUM</button>
                     </div>
-                    <div class="col-4 level-option-buttons">
+                    <div class="col-12 col-lg-4 level-option-buttons">
                         <button type="button" class="btn btn-lg btn-danger" id="difficult">DIFFICULT</button>
                     </div>
                 </div>
@@ -67,21 +67,33 @@
     <!-- Quiz section ------------------------>
     <div id="quiz-page" class="text-center">
         <div class="row">
-            <div class="col">
-                <h2 id="level-title"></h2>
-                <h3 id="question-text">Question will appear here</h2>
-                    <div class="answer-container">
-                        <button type="buttom" data-number="1" class="btn btn-lg btn-outline-primary choice-text">Choice
+
+            <h2 id="level-title" class="col-12"></h2>
+            <h3 id="question-text" class="col-12">Question will appear here</h2>
+                <div class="answer-container row text-center g-0">
+                    <div class="col-12 col-sm-6 col-md-2">
+                        <button type="buttom" data-number="1"
+                            class="btn btn-lg btn-outline-primary choice-text ">Choice
                             1</button>
-                        <button type="buttom" data-number="2" class="btn btn-lg btn-outline-success choice-text">Choice
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-2">
+                        <button type="buttom" data-number="2"
+                            class="btn btn-lg btn-outline-success choice-text">Choice
                             2</button>
-                        <button type="buttom" data-number="3" class="btn btn-lg btn-outline-danger choice-text">Choice
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-2">
+                        <button type="buttom" data-number="3"
+                            class="btn btn-lg btn-outline-danger choice-text">Choice
                             3</button>
-                        <button type="buttom" data-number="4" class="btn btn-lg btn-outline-warning choice-text">Choice
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-2">
+                        <button type="buttom" data-number="4"
+                            class="btn btn-lg btn-outline-warning choice-text">Choice
                             4</button>
                     </div>
-                    <h4 id="score">Score: 0/0</h4>
-            </div>
+                </div>
+                <h4 id="score">Score: 0/0</h4>
+
         </div>
     </div>
 

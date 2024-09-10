@@ -218,7 +218,7 @@ let difficultQuestions = [{
 {
     question: "Which of these is not a method for destroying horcruxes?",
     choice1: "Godric Gryffindor's sword",
-    choice2: "Feidfyre",
+    choice2: "Feindfyre",
     choice3: "Basilisk venom",
     choice4: "Dragon flame",
     answer: 4,

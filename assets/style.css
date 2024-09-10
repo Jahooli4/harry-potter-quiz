@@ -27,7 +27,7 @@
     font-family: "Old Standard TT", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 5rem;
+    font-size: 7vw;
     color: #eeba30;
     -webkit-text-stroke: 1px black;
     padding: 15px;
@@ -36,7 +36,7 @@
 
 #home-page {
     display: block;
-    height: 500px;
+    height: 90%;
 }
 
 
@@ -47,7 +47,7 @@
     font-family: "Old Standard TT", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fafafa;
     background-color: rgba(128, 0, 128, 0.8);
     padding: 5px;
@@ -93,10 +93,10 @@
 #quiz-page {
     display: none;
     background-color: rgb(96, 5, 96);
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 40px;
-    height: 550px;
+    height: 90%;
     border-radius: 25px;
   }
 
@@ -115,11 +115,14 @@
 
 .answer-container {
     padding: 20px;
+    margin: auto;
 }
 
 .answer-container button {
     padding: 20px;
-    margin: 10px;
+    margin: auto;
+    width: 80%;
+    
 }
 
 #score {
