@@ -3,13 +3,19 @@
 const home = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const endGamePage = document.getElementById("end-game-page");
+const pageTitle = document.getElementById("page-title");
 
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const levelTitle = document.getElementById('level-title');
 
-
-
+// House selection banner
+const houseBanner = document.getElementById("house-banner");
+// House selection buttons
+const hufflepuffBtn = document.getElementById("hufflepuff");
+const ravenclawBtn = document.getElementById("ravenclaw");
+const gryffindorBtn = document.getElementById("gryffindor");
+const slytherinBtn = document.getElementById("slytherin");
 
 // Level selection buttons
 const easyBtn = document.getElementById("easy");
@@ -24,6 +30,33 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+
+// event listeners to alter the background color for the house banner buttons
+
+    hufflepuffBtn.addEventListener('click', function (event) {
+    document.body.style.backgroundColor = "#eeba30";
+    pageTitle.style.color = "#000000";
+    houseBanner.style.display = "none";
+});
+
+ravenclawBtn.addEventListener('click', function (event) {
+    document.body.style.backgroundColor = "#0d6efd";
+    pageTitle.style.color = "#cd7f32";
+    houseBanner.style.display = "none";
+});
+
+gryffindorBtn.addEventListener('click', function (event) {
+    document.body.style.backgroundColor = "#dc3545";
+    pageTitle.style.color = "gold";
+    houseBanner.style.display = "none";
+});
+
+slytherinBtn.addEventListener('click', function (event) {
+    document.body.style.backgroundColor = "#198754";
+    pageTitle.style.color = "silver";
+    houseBanner.style.display = "none";
+});
+
 
 // Questions for the easy level
 let easyQuestions = [{
