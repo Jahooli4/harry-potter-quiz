@@ -62,25 +62,13 @@
     }
   }
 
-
-/* .level-options {
-    height: 100px;
-}
-
-
-.select-level-text-container {
-    height: 400px;
-} */
-
-
 .level-option-buttons {
     padding: 20px;
     margin-bottom: 8px;
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 /* Hero background image */
-
 #hero-image {
     background: purple url("hero_image.jpg") no-repeat center;
     height: 500px;
@@ -110,7 +98,7 @@
 #level-title {
     color: white;
     font-family: "MedievalSharp", cursive;
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: bold;
     padding: 20px;
 }

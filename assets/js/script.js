@@ -1,3 +1,5 @@
+
+
 const home = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const endGamePage = document.getElementById("end-game-page");
@@ -172,7 +174,7 @@ let mediumQuestions = [{
     answer: 1,
 },
 {
-    question: "In The Goblet of Fire, Snape wrongly accuses HArry of stealing what from him?",
+    question: "In The Goblet of Fire, Snape wrongly accuses Harry of stealing what from him?",
     choice1: "Money",
     choice2: "Gillyweed",
     choice3: "Veritaserum",
