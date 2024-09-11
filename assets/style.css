@@ -47,14 +47,20 @@
     font-family: "Old Standard TT", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 5vw;
+    font-size: 4vw;
     color: #fafafa;
     background-color: rgba(128, 0, 128, 0.8);
     padding: 5px;
     border-radius: 25px;
     width: 50%;
-    margin: auto;
+    margin: 300px auto 10px;
 }
+
+@media only screen and (max-width: 995px) {
+    #select-level-text {
+        margin: 50px auto 10px;
+    }
+  }
 
 
 /* .level-options {
@@ -116,7 +122,6 @@
 
 .answer-container {
     padding: 20px;
-    background-color: none;
     
 }
 
