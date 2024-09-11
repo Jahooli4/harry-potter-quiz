@@ -40,13 +40,13 @@ let availableQuestions = [];
 });
 
 ravenclawBtn.addEventListener('click', function (event) {
-    document.body.style.backgroundColor = "#0d6efd";
-    pageTitle.style.color = "#cd7f32";
+    document.body.style.backgroundColor = "#0041c2";
+    pageTitle.style.color = "gold";
     houseBanner.style.display = "none";
 });
 
 gryffindorBtn.addEventListener('click', function (event) {
-    document.body.style.backgroundColor = "#dc3545";
+    document.body.style.backgroundColor = "#b22222";
     pageTitle.style.color = "gold";
     houseBanner.style.display = "none";
 });

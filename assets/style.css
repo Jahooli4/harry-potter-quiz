@@ -162,9 +162,13 @@
     width: 80%;
     margin: auto;
     padding: 40px;
-    height: 500px;
+    height: 95%;
     border-radius: 25px;
 
+}
+
+#hogwarts-crest {
+    height:140px;
 }
 
 #total-score {
@@ -175,6 +179,7 @@
     padding: 30px;
     width: 75%;
     margin: auto;
+    font-size: 3vw;
 }
 
 #play-again-btn {
