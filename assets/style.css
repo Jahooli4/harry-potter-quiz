@@ -147,6 +147,25 @@
     width: 80%;
 }
 
+@media only screen and (max-width: 995px) {
+   .answer-container .button1:hover {
+        background-color: unset;
+        color: #0d6efd;
+    }
+    .answer-container .button2:hover {
+        background-color: unset;
+        color:#198754;
+    }
+    .answer-container .button3:hover {
+        background-color: unset;
+        color:#dc3545;
+    }
+    .answer-container .button4:hover {
+        background-color: unset;
+        color:#ffc107;
+    }
+}
+
 
 #score {
     color: white;
