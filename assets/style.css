@@ -29,7 +29,7 @@
     font-style: normal;
     font-size: 7vw;
     color: #eeba30;
-    -webkit-text-stroke: 1px black;
+    /* -webkit-text-stroke: 1px black; */
     padding: 15px;
 }
 
@@ -198,11 +198,13 @@
     padding: 30px;
     width: 75%;
     margin: auto;
-    font-size: 3vw;
+    font-size: 20px;
 }
 
 #play-again-btn {
-    padding: 20px;
+    padding: 10px;
     margin: 30px;
+    background-color: purple;
+    color: #fafafa;
 }
 
