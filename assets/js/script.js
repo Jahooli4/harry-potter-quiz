@@ -38,7 +38,6 @@ let availableQuestions = [];
     pageTitle.style.color = "#000000";
     houseBanner.style.display = "none";
     endGamePage.style.backgroundColor = "#198754";
-    endGamePage.style.color = "#fafafa";
 });
 
 ravenclawBtn.addEventListener('click', function (event) {
