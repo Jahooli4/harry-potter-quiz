@@ -135,3 +135,16 @@ Minimal in design so as not to distract from the main quiz. I have included basi
 ![Footer section](assets/images/readme/footer-screenshot.png)
 
 
+## Future Features
+### Home page
+> - I would like to include some sort of animation on page load to add a more 3d feel to the site.
+### Quiz section
+> - Given more time I would like to add some sort of audio when the user selects an answer, with different noises based on whether the answer is correct or not.
+### Additional pages
+> - In the future I would plan to add a leaderboard feature that would allow users to create a username and appear on a page of high scorers.
+
+## Languages used
+
+> - HTML5
+> - CSS3
+> - Javascript
