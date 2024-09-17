@@ -128,4 +128,10 @@ The 'play again' button appears to invite the user to attempt another level.
 
 ![Endgame screenshot](assets/images/readme/endgame-screenshot.png)
 
+> - Footer section
+
+Minimal in design so as not to distract from the main quiz. I have included basic social media links in a place that is intuitive to the user.
+
+![Footer section](assets/images/readme/footer-screenshot.png)
+
 

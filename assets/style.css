@@ -240,6 +240,10 @@
 }
 
 /* Footer section */
+
+footer {
+    margin-top: 10px;
+}
 .copyright {
     font-size: 16px;
     padding: 5px;
@@ -252,4 +256,8 @@
 
 .social-links i {
     color: purple;
+}
+
+.social-links i:hover {
+    color: rgb(169, 82, 169);
 }
