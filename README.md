@@ -67,3 +67,47 @@ Quiz page:
 ![Quiz wireframe](assets/images/readme/quiz-wireframe.png)
 End game page:
 ![End game wireframe](assets/images/readme/endgame-wireframe.png)
+
+The site has been designed to be as user friendly as possible, utilising a classic layout style with the title/logo at the top that links to the home page, central main content, and footer with external social media links at the bottom. The layout has been made as consistent as possible across devices of different sizes, with elements only rearranging to provide optimised viewing.
+
+### Surface plane
+
+**Color**
+With regards to the main colour scheme of the site I have decided to opt for the classic red, green, blue and yellow colours of the Hogwarts houses for the optional background colours, aswell as for the answer selection buttons. To ensure these colours pop I have chosen a classic purple colour for the background as I think this allows sufficient contrast without being aesthetically jarring.
+> - #fafafa (white)
+> - #800080 (purple)
+> - #eeba30 (yellow)
+> - #0041c2 (blue)
+> - #b22222 (red)
+> - #198754 (green)
+
+![Colour palette](assets/images/readme/coolors-palette.png)
+Colour palette generated from coolors.co
+
+**Font:**
+The main font for the quiz will be "Old Standard TT" and for the main page title/logo and other smaller headings I will use "MedievalSharp" as this is the closest I could find to the fonts used on the Harry Potter book covers. I think the two fonts complement eachother nicely and are easily legible.
+
+## Existing Features
+> - Title/logo
+
+Linked to homepage so user may refresh the quiz whenever they please, visible throughout the quiz.
+
+> - House selection
+
+User is invited to select their Hogwarts house of choice.
+
+![Landing page](assets/images/readme/landing-page.png)
+
+The background and logo change colour accordingly using JS.
+
+![Level selection page showing diferent background colour examples](assets/images/readme/level-page.png)
+
+User can then choose level difficulty for the quiz from the buttons.
+
+> - Quiz questions and answers
+
+Questions are pulled from the relevant array (easy, medium, difficult).
+
+Answer buttons highlight when hovered over (largedevices) to create positive UX.
+
+![Quiz page](assets/images/readme/quiz-page.png)
