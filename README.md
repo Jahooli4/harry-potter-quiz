@@ -30,7 +30,9 @@ The user can then select from three levels of difficulty: easy, medium or diffic
 ### Scope Plane
   > - The website should have a link to the home page visible at all times so the user can reset the quiz without using browser navigation buttons.
   > - The website should have a welcome message for the user that concisely describes the purpose of the site.
-  > - The website should display facts about the moon in a visually stimulating way.
-  > - The website should show the current phase of the moon.
-  > - The website should give the user a way to sign up to receive moon phase updates as often as they choose.
-  > - The website should give the user a link to further reading about the moon.
+  > - The website should be visually appealing to the user and be styled in a way that is relevant to the Harry Potter theme.
+  > - The website background should change colour when the user selects their house.
+  > - The website should give the user a choice in level difficulty for the quiz.
+  > - The website should keep a running total of the user's score and display this to them.
+  > - The website should let the user know whether they have selected the correct answer or not.
+  > - The website should display the user's total score and an end of quiz message after 10 questions have been answered.
