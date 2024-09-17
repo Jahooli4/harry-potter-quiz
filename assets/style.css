@@ -238,3 +238,18 @@
     background-color: purple;
     color: #fafafa;
 }
+
+/* Footer section */
+.copyright {
+    font-size: 16px;
+    padding: 5px;
+    color: purple;
+}
+
+.social-links {
+    padding: 5px;
+}
+
+.social-links i {
+    color: purple;
+}
