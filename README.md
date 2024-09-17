@@ -36,3 +36,34 @@ The user can then select from three levels of difficulty: easy, medium or diffic
   > - The website should keep a running total of the user's score and display this to them.
   > - The website should let the user know whether they have selected the correct answer or not.
   > - The website should display the user's total score and an end of quiz message after 10 questions have been answered.
+
+## Structure Plane 
+### (All 'pages' are on one site page and are hidden or displayed via display: block/hidden css)
+
+> - Site logo/title
+
+Home page
+> - Welcome message that briefly describes quiz
+> - User is invited to choose their Hogwarts house via buttons (background changes colour once selected and Level options appear)
+> - Level selection options (Easy, Medium, Difficult)
+> - Photo of the main characters as background.
+
+Quiz page
+> - Level difficulty based on user selection
+> - Randomly generated question
+> - 4 answer buttons with hover effects
+> - Running score (score/current question number)
+
+End game page
+> - Final score is displayed out of 10
+> - End of game message is displayed (generated based on score)
+> - 'Play again' button to encourage user to restart the game or try a new level.
+
+### Wireframes:
+
+Homepage:
+![Home wireframes](assets/images/readme/home-wireframe.png)
+Quiz page:
+![Quiz wireframe](assets/images/readme/quiz-wireframe.png)
+End game page:
+![End game wireframe](assets/images/readme/endgame-wireframe.png)
