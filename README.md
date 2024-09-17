@@ -96,7 +96,7 @@ Linked to homepage so user may refresh the quiz whenever they please, visible th
 
 User is invited to select their Hogwarts house of choice.
 
-![Landing page](assets/images/readme/landing-page.png)
+![Landing page screenshot](assets/images/readme/landing-page.png)
 
 The background and logo change colour accordingly using JS.
 
@@ -108,6 +108,24 @@ User can then choose level difficulty for the quiz from the buttons.
 
 Questions are pulled from the relevant array (easy, medium, difficult).
 
-Answer buttons highlight when hovered over (largedevices) to create positive UX.
+Answer buttons highlight when hovered over (large devices) to create positive UX.
 
-![Quiz page](assets/images/readme/quiz-page.png)
+![Quiz page screenshot](assets/images/readme/quiz-page.png)
+
+Score increments +1 with every correct answer, scored out of the current question number (score/question number)
+
+![Score screenshot](assets/images/readme/score-screenshot.png)
+
+After user has selected an answer, the alert box appears to let user knopw whether their choice was correct or not.
+
+![Alert screenshot](assets/images/readme/alert-screenshot.png)
+
+> - Endgame page 
+
+After 10 questions in any of the levels, the user's score is displayed with the relevent message based on how well they did.
+
+The 'play again' button appears to invite the user to attempt another level.
+
+![Endgame screenshot](assets/images/readme/endgame-screenshot.png)
+
+
