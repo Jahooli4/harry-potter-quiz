@@ -238,10 +238,21 @@ body {
 
 #play-again-btn {
     padding: 10px;
-    margin: 30px;
+    margin: auto;
     background-color: purple;
-    color: #fafafa;
+    width: 20%;
+    border-radius: 25px;
 }
+
+#play-again-btn:hover {
+    background-color: rgb(188, 74, 188);
+}
+
+#play-again-btn a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
 
 /* Footer section */
 
