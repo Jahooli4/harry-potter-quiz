@@ -148,3 +148,30 @@ Minimal in design so as not to distract from the main quiz. I have included basi
 > - HTML5
 > - CSS3
 > - Javascript
+
+## Technologies used
+> - Bootstrap: I used Bootstrap to help build my site in a responsive layout. (https://getbootstrap.com/docs/5.3/getting-started/)
+> - Google Fonts: The font 'Old Standard TT' was used for the main body of the site. The font 'MedievalSharp' was used for the Logo and smaller titles.
+> - Font Awesome: was used to import icons into the footer for the social media links.
+> - Git: I used Gitpod as a code space to create the site from which I pushed my site to Github for deployment.
+> - GitHub: I used GitHub as the respository for the projects code after being pushed from Gitpod.
+> - Balsamiq: I used Balsamiq to create wireframes to outline to design of the site.
+> - Coolor: I used coolor.co to generate a colour palette.
+
+## Testing
+
+### User testing
+| Feature being tested:| Steps                                | Expected outcome  | Pass/Fail |
+|:---------------------|:-------------------------------------|:------------------|-----|
+| Navigation - Logo | Click the quiz logo on every page. | The logo should link the user back to the homepage, should be active on every page.           | PASS |
+| Home page - UX | Read through the text. | It should be obvious to any user that the site is a quiz from reading the front page. | PASS |
+| Home page - Hogwarts house banner buttons | Click each house button. | Each button should change the background colour and logo colour of the site. | PASS |
+| Home page - Level selection buttons | Click each level button. | The quiz should begin on the relevant difficulty selected with the correct level title and questions. | PASS |
+| Quiz page - Questions | Play quiz the whole way through each level. | Questions should be randomly generated and relevant to the level selected. No repeated questions. | PASS |
+| Quiz page - Answer buttons | Hover mouse over buttons/Tap on mobile device. | Buttons should highlight when hovered and select the answer when clicked. New question should then be generated. | PASS |
+| Quiz page - UX | Read through every question. | Text should all be clear and easily readable and the questions make sense. | PASS|
+| Quiz page - score/question counter | Play quiz whole way through on each level. | Score should incrememnt by 1 for every correct answer and the question counter increment by 1 for every new question. | PASS |
+| Footer - Social media icons | Click each one, test on each page. | Each link should change colour when hovered over and open in a new tab when clicked. | PASS |
+| End game page - finish message | Complete quiz with each possible score. | End game message should alter based on score. Text should be clear and legible. | PASS |
+| End game poge - Play again button | Click button | Quiz should reset back to the beginning | PASS| 
+| Responsiveness - UX | Resize site for all device sizes. | Check that images/text/other elements resize as expected, text should be readable and elements should all be visible and not overlap randomly. Repeat for every page. | PASS|
