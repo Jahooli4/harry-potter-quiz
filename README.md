@@ -224,3 +224,22 @@ The steps to deploy the project are as follows:
 ![screenshot of correct settings on Github](assets/images/readme/deployment-screenshot.png)
 
 7. Should you wish to add your own custom domain name you would have to purchase one with an external provider and enter it in the box towards the bottom of the page above.
+
+## Credits
+### Images sources:
+> - Hero image (https://www.glamourmagazine.co.uk/harry-potter-movies)
+> - Hogwarts crest (https://www.pngwing.com/en/free-png-khufc)
+
+### Tutorials:
+> - Quiz building tutorial (https://www.youtube.com/watch?v=PBcqGxrr9g8)
+> - Quiz building tutorial (https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=3)
+> - javaScript tutorials w3 schools (https://www.w3schools.com/js/default.asp)
+
+### Content and Resources:
+> - Fonts sourced from Google Fonts: (https://fonts.google.com/selection/embed)
+> - Am I responsive screenshots for Readme: (https://ui.dev/amiresponsive)
+> - Social media icons sourced from Font awesome: (https://fontawesome.com/icons)
+> - Favicon: (https://favicon.io/emoji-favicons/crescent-moon/)
+
+#### Acknowledgments: 
+Thank you to my mentor Alan Bushell for his advice and feedback during the project.

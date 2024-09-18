@@ -23,6 +23,10 @@ const slytherinBtn = document.getElementById("slytherin");
 const easyBtn = document.getElementById("easy");
 const mediumBtn = document.getElementById("medium");
 const difficultBtn = document.getElementById("difficult");
+const levelButtons = document.getElementById("level-options");
+
+// Level selection text
+const levelSelectionText = document.getElementById("select-level-text");
 
 // Variables for the get new question function
 let currentQuestion = {};
@@ -36,24 +40,32 @@ hufflepuffBtn.addEventListener('click', function (event) {
     document.body.style.backgroundColor = "#eeba30";
     pageTitle.style.color = "#000000";
     houseBanner.style.display = "none";
+    levelSelectionText.style.display = "block";
+    levelButtons.style.display = "block";
     endGamePage.style.backgroundColor = "#198754";
 });
 
 ravenclawBtn.addEventListener('click', function (event) {
     document.body.style.backgroundColor = "#0041c2";
     pageTitle.style.color = "gold";
+    levelSelectionText.style.display = "block";
+    levelButtons.style.display = "block";
     houseBanner.style.display = "none";
 });
 
 gryffindorBtn.addEventListener('click', function (event) {
     document.body.style.backgroundColor = "#b22222";
     pageTitle.style.color = "gold";
+    levelSelectionText.style.display = "block";
+    levelButtons.style.display = "block";
     houseBanner.style.display = "none";
 });
 
 slytherinBtn.addEventListener('click', function (event) {
     document.body.style.backgroundColor = "#198754";
     pageTitle.style.color = "silver";
+    levelSelectionText.style.display = "block";
+    levelButtons.style.display = "block";
     houseBanner.style.display = "none";
 });
 
