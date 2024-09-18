@@ -191,4 +191,36 @@ I sent my website to 5 users and asked them to complete the following tasks:
 
 ![Lighthouse testing screenshot](assets/images/readme/lighthouse-testing.png)
 
+## HTML validator:
 
+![HTML validator screenshot](assets/images/readme/html-validator-screenshot.png)
+
+## CSS validator:
+
+![CSS validator screenshot](assets/images/readme/css-validator-screenshot.png)
+
+## JavaScript validator:
+
+![javaScript validator screenshot](assets/images/readme/javascript-validator.png)
+
+## Bugs: 
+
+> - I had trouble with the bootstrap buttons I was using to display the answer choices. For some reason the hover effect lingered on mobile devices, meaning the previously selected answer remained highlighted even when the next question was displayed. 
+> - As this was only happening on touch devices I decided to add a media query that removes the hover effect on anything smaller than a large device.
+
+![Bug screenshot](assets/images/readme/bug-screenshot.png)
+
+## Deployment
+
+The steps to deploy the project are as follows:
+
+1. Clicked on Settings on the navigation menu in the repository
+2. I then selected the Pages menu on the side bar.
+3. In the first dropdown menu labeled Source I selected the branch of the name 'main' from the dropdown.
+4. In the next dropdown menu I left '/root' as the default option.
+5. Selected Save
+6. After 2-3 minute my project was live
+
+![screenshot of correct settings on Github](assets/images/readme/deployment-screenshot.png)
+
+7. Should you wish to add your own custom domain name you would have to purchase one with an external provider and enter it in the box towards the bottom of the page above.

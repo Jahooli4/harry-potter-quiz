@@ -1,5 +1,4 @@
-
-
+// Variables pulled from html
 const home = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const endGamePage = document.getElementById("end-game-page");
@@ -8,6 +7,9 @@ const pageTitle = document.getElementById("page-title");
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const levelTitle = document.getElementById('level-title');
+
+let finishMessage = document.getElementById("finish-message");
+let finalScore = document.getElementById("total-score");
 
 // House selection banner
 const houseBanner = document.getElementById("house-banner");
@@ -22,9 +24,7 @@ const easyBtn = document.getElementById("easy");
 const mediumBtn = document.getElementById("medium");
 const difficultBtn = document.getElementById("difficult");
 
-// Play again button
-const playAgainBtn = document.getElementById("play-again-btn");
-
+// Variables for the get new question function
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -32,8 +32,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 // event listeners to alter the background color for the house banner buttons
-
-    hufflepuffBtn.addEventListener('click', function (event) {
+hufflepuffBtn.addEventListener('click', function (event) {
     document.body.style.backgroundColor = "#eeba30";
     pageTitle.style.color = "#000000";
     houseBanner.style.display = "none";
@@ -57,7 +56,6 @@ slytherinBtn.addEventListener('click', function (event) {
     pageTitle.style.color = "silver";
     houseBanner.style.display = "none";
 });
-
 
 // Questions for the easy level
 let easyQuestions = [{
@@ -144,177 +142,170 @@ let easyQuestions = [{
 
 // Questions for the medium level
 let mediumQuestions = [{
-    question: "Harry's patronus takes what form?",
-    choice1: "A goat",
-    choice2: "A stag",
-    choice3: "A moose",
-    choice4: "A doe",
-    answer: 2,
-},
-{
-    question: "What is the Hogwarts poltergeist called?",
-    choice1: "Peeves",
-    choice2: "Peter",
-    choice3: "Pesky",
-    choice4: "Pablo",
-    answer: 1,
-},
-{
-    question: "What is the name of Voldemort's father?",
-    choice1: "Tony Riddle",
-    choice2: "Tom Riddle",
-    choice3: "Ted Riddle",
-    choice4: "Tim Riddle",
-    answer: 2,
-},
-{
-    question: "Which quidditch team does Viktor Krum play for?",
-    choice1: "Romania",
-    choice2: "Hungary",
-    choice3: "Serbia",
-    choice4: "Bulgaria",
-    answer: 4,
-},
-{
-    question: "What was Sirius Black's nickname at Hogwarts?",
-    choice1: "Moony",
-    choice2: "Padfoot",
-    choice3: "Prongs",
-    choice4: "Wormtail",
-    answer: 2,
-},
-{
-    question: "Which spell would you use to summon an object?",
-    choice1: "Lumos",
-    choice2: "Reparo",
-    choice3: "Episkey",
-    choice4: "Accio",
-    answer: 4,
-},
-{
-    question: "Fred and George Weasley play which positions on the Hogwarts quidditch team?",
-    choice1: "Chasers",
-    choice2: "Keepers",
-    choice3: "Beaters",
-    choice4: "They aren't on the team!",
-    answer: 3,
-},
-{
-    question: "Ron's pet rat turns out to be who?",
-    choice1: "Peter Pettigrew",
-    choice2: "Pansy Parkinson",
-    choice3: "Sirius Black",
-    choice4: "Padma Patil",
-    answer: 1,
-},
-{
-    question: "In The Goblet of Fire, Snape wrongly accuses Harry of stealing what from him?",
-    choice1: "Money",
-    choice2: "Gillyweed",
-    choice3: "Veritaserum",
-    choice4: "Polyjuice potion ingredients",
-    answer: 4,
-},
-{
-    question: "Professor Karkaroff used to be what?",
-    choice1: "A werewolf",
-    choice2: "A deatheater",
-    choice3: "A Horwarts student",
-    choice4: "An auror",
-    answer: 2,
-},
+        question: "Harry's patronus takes what form?",
+        choice1: "A goat",
+        choice2: "A stag",
+        choice3: "A moose",
+        choice4: "A doe",
+        answer: 2,
+    },
+    {
+        question: "What is the Hogwarts poltergeist called?",
+        choice1: "Peeves",
+        choice2: "Peter",
+        choice3: "Pesky",
+        choice4: "Pablo",
+        answer: 1,
+    },
+    {
+        question: "What is the name of Voldemort's father?",
+        choice1: "Tony Riddle",
+        choice2: "Tom Riddle",
+        choice3: "Ted Riddle",
+        choice4: "Tim Riddle",
+        answer: 2,
+    },
+    {
+        question: "Which quidditch team does Viktor Krum play for?",
+        choice1: "Romania",
+        choice2: "Hungary",
+        choice3: "Serbia",
+        choice4: "Bulgaria",
+        answer: 4,
+    },
+    {
+        question: "What was Sirius Black's nickname at Hogwarts?",
+        choice1: "Moony",
+        choice2: "Padfoot",
+        choice3: "Prongs",
+        choice4: "Wormtail",
+        answer: 2,
+    },
+    {
+        question: "Which spell would you use to summon an object?",
+        choice1: "Lumos",
+        choice2: "Reparo",
+        choice3: "Episkey",
+        choice4: "Accio",
+        answer: 4,
+    },
+    {
+        question: "Fred and George Weasley play which positions on the Hogwarts quidditch team?",
+        choice1: "Chasers",
+        choice2: "Keepers",
+        choice3: "Beaters",
+        choice4: "They aren't on the team!",
+        answer: 3,
+    },
+    {
+        question: "Ron's pet rat turns out to be who?",
+        choice1: "Peter Pettigrew",
+        choice2: "Pansy Parkinson",
+        choice3: "Sirius Black",
+        choice4: "Padma Patil",
+        answer: 1,
+    },
+    {
+        question: "In The Goblet of Fire, Snape wrongly accuses Harry of stealing what from him?",
+        choice1: "Money",
+        choice2: "Gillyweed",
+        choice3: "Veritaserum",
+        choice4: "Polyjuice potion ingredients",
+        answer: 4,
+    },
+    {
+        question: "Professor Karkaroff used to be what?",
+        choice1: "A werewolf",
+        choice2: "A deatheater",
+        choice3: "A Horwarts student",
+        choice4: "An auror",
+        answer: 2,
+    },
 ];
 
 
 // Questions for the difficult level
 let difficultQuestions = [{
-    question: "What is the name of Albus Dumbledore's brother?",
-    choice1: "Adrian",
-    choice2: "Abernanthy",
-    choice3: "Aberforth",
-    choice4: "Alaric",
-    answer: 3,
-},
-{
-    question: "Which Weasley brother does Fleur Delacour marry?",
-    choice1: "Fred",
-    choice2: "Bill",
-    choice3: "Charlie",
-    choice4: "Percy",
-    answer: 2,
-},
-{
-    question: "Which Ravenclaw trinket does Tom Riddle turn into a horcrux?",
-    choice1: "A ring",
-    choice2: "A pearl mecklace",
-    choice3: "A diadem",
-    choice4: "A diamond",
-    answer: 3,
-},
-{
-    question: "Which of these is not a method for destroying horcruxes?",
-    choice1: "Godric Gryffindor's sword",
-    choice2: "Feindfyre",
-    choice3: "Basilisk venom",
-    choice4: "Dragon flame",
-    answer: 4,
-},
-{
-    question: "Who is the half blood prince?",
-    choice1: "Remus Lupin",
-    choice2: "Sirius Black",
-    choice3: "Severus Snape",
-    choice4: "James Potter",
-    answer: 3,
-},
-{
-    question: "Xenophilius Lovegood is the editor of which newspaper?",
-    choice1: "The Daily Prophet",
-    choice2: "The Quibbler",
-    choice3: "The Wizards Voice",
-    choice4: "The Hogwarts Herald",
-    answer: 2,
-},
-{
-    question: "How many siblings does Ron Weasley have?",
-    choice1: "4",
-    choice2: "5",
-    choice3: "6",
-    choice4: "7",
-    answer: 3,
-},
-{
-    question: "Which of these objects is not a Deathly Hallow?",
-    choice1: "The deluminator",
-    choice2: "The elder wand",
-    choice3: "Marvolo Gaunt's ring",
-    choice4: "The invisibility cloak",
-    answer: 1,
-},
-{
-    question: "What are the last 3 words of Harry Potter and the Deathly Hallows?",
-    choice1: "That was it.",
-    choice2: "Only you know.",
-    choice3: "No, he said.",
-    choice4: "All was well.",
-    answer: 4,
-},
-{
-    question: "Which of these characters is not an animagus?",
-    choice1: "Minerva McGonagall",
-    choice2: "James Potter",
-    choice3: "Rita Skeeter",
-    choice4: "Fenrir Greyback",
-    answer: 4,
-},
+        question: "What is the name of Albus Dumbledore's brother?",
+        choice1: "Adrian",
+        choice2: "Abernanthy",
+        choice3: "Aberforth",
+        choice4: "Alaric",
+        answer: 3,
+    },
+    {
+        question: "Which Weasley brother does Fleur Delacour marry?",
+        choice1: "Fred",
+        choice2: "Bill",
+        choice3: "Charlie",
+        choice4: "Percy",
+        answer: 2,
+    },
+    {
+        question: "Which Ravenclaw trinket does Tom Riddle turn into a horcrux?",
+        choice1: "A ring",
+        choice2: "A pearl mecklace",
+        choice3: "A diadem",
+        choice4: "A diamond",
+        answer: 3,
+    },
+    {
+        question: "Which of these is not a method for destroying horcruxes?",
+        choice1: "Godric Gryffindor's sword",
+        choice2: "Feindfyre",
+        choice3: "Basilisk venom",
+        choice4: "Dragon flame",
+        answer: 4,
+    },
+    {
+        question: "Who is the half blood prince?",
+        choice1: "Remus Lupin",
+        choice2: "Sirius Black",
+        choice3: "Severus Snape",
+        choice4: "James Potter",
+        answer: 3,
+    },
+    {
+        question: "Xenophilius Lovegood is the editor of which newspaper?",
+        choice1: "The Daily Prophet",
+        choice2: "The Quibbler",
+        choice3: "The Wizards Voice",
+        choice4: "The Hogwarts Herald",
+        answer: 2,
+    },
+    {
+        question: "How many siblings does Ron Weasley have?",
+        choice1: "4",
+        choice2: "5",
+        choice3: "6",
+        choice4: "7",
+        answer: 3,
+    },
+    {
+        question: "Which of these objects is not a Deathly Hallow?",
+        choice1: "The deluminator",
+        choice2: "The elder wand",
+        choice3: "Marvolo Gaunt's ring",
+        choice4: "The invisibility cloak",
+        answer: 1,
+    },
+    {
+        question: "What are the last 3 words of Harry Potter and the Deathly Hallows?",
+        choice1: "That was it.",
+        choice2: "Only you know.",
+        choice3: "No, he said.",
+        choice4: "All was well.",
+        answer: 4,
+    },
+    {
+        question: "Which of these characters is not an animagus?",
+        choice1: "Minerva McGonagall",
+        choice2: "James Potter",
+        choice3: "Rita Skeeter",
+        choice4: "Fenrir Greyback",
+        answer: 4,
+    },
 ];
-
-const correctAnswerPoints = 1;
-const maxQuestions = 10;
-
-let finishMessage = document.getElementById("finish-message");
-let finalScore = document.getElementById("total-score");
-
 
 // Function to show quiz page and hide homepage when a level is selected
 function showQuiz() {
@@ -322,8 +313,6 @@ function showQuiz() {
     endGamePage.style.display = "none";
     quizPage.style.display = "block";
 }
-
-
 
 // Displays the quiz page when the easy level button is clicked
 
@@ -352,7 +341,6 @@ mediumBtn.addEventListener("click", startMediumGame = () => {
     levelTitle.innerText = "Level: MEDIUM";
 });
 
-
 // Displays the quiz page when the difficult level button is clicked
 
 difficultBtn.addEventListener("click", showQuiz);
@@ -367,10 +355,6 @@ difficultBtn.addEventListener("click", startDifficultGame = () => {
     levelTitle.innerText = "Level: DIFFICULT";
 });
 
-
-
-
-
 // Function to display endgame message and total score once the quiz is complete
 function endGame() {
     home.style.display = "none";
@@ -378,13 +362,13 @@ function endGame() {
     endGamePage.style.display = "block";
     finalScore.innerText = `You scored ${score}/${questionCounter}`;
     if (score <= 4) {
-        finishMessage.innerText = "It looks like someone needs extra tutoring..."
+        finishMessage.innerText = "It looks like someone needs extra tutoring...";
     } else if (score <= 6) {
-        finishMessage.innerText = "Not bad, not bad, but a bit of extra studying wouldn't hurt!"
+        finishMessage.innerText = "Not bad, not bad, but a bit of extra studying wouldn't hurt!";
     } else {
-        finishMessage.innerText = "Well done, you really do know your way around the wizarding world!"
-    };
-};
+        finishMessage.innerText = "Well done, you really do know your way around the wizarding world!";
+    }
+}
 
 // Function to select a random question + choices from the easyQuestions array
 getNewQuestion = () => {
@@ -397,20 +381,18 @@ getNewQuestion = () => {
         question.innerText = currentQuestion.question;
 
         choices.forEach((choice) => {
-            const number = choice.dataset["number"];
+            const ["number"] = choice.dataset["number"];
             choice.innerText = currentQuestion["choice" + number];
         });
         availableQuestions.splice(questionIndex, 1);
         acceptingAnswers = true;
-    };
+    }
 };
 
 // Function to increment the score value during the quiz
 function incrementScore() {
     document.getElementById("score").innerHTML = `Score: ${score}/${questionCounter}`;
-};
-
-
+}
 
 // Function to add an event listener every time an answer is clicked
 choices.forEach(function (choice) {
@@ -421,20 +403,16 @@ choices.forEach(function (choice) {
         const selectedChoice = event.target;
         const selectedAnswer = selectedChoice.getAttribute('data-number');
 
-// if function that displays an alert for right and wrong answers
+        // if function that displays an alert for right and wrong answers
         if (selectedAnswer == currentQuestion.answer) {
             alert("Well done, that's the right answer!");
             score++;
         } else {
             alert("Oops that's not quite right");
-        };
+        }
         incrementScore();
         getNewQuestion();
     });
 });
-
-
-
-
 
 startEasyGame();
