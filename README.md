@@ -175,3 +175,20 @@ Minimal in design so as not to distract from the main quiz. I have included basi
 | End game page - finish message | Complete quiz with each possible score. | End game message should alter based on score. Text should be clear and legible. | PASS |
 | End game poge - Play again button | Click button | Quiz should reset back to the beginning | PASS| 
 | Responsiveness - UX | Resize site for all device sizes. | Check that images/text/other elements resize as expected, text should be readable and elements should all be visible and not overlap randomly. Repeat for every page. | PASS|
+
+### User testing Challenge
+
+I sent my website to 5 users and asked them to complete the following tasks:
+
+| Test |	Answered correctly: |
+|:-----|:---------|
+|Upon arrival to website is the purpose of the site obvious? | 5/5 yes |
+|Please navigate to the facebook social |	5/5 |
+|Please select your house + game level |	5/5 |
+|Asked users whether they could easily see where their score is | 5/5 yes |
+
+## Lighthouse Testing:
+
+![Lighthouse testing screenshot](assets/images/readme/lighthouse-testing.png)
+
+
