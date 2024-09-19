@@ -28,8 +28,10 @@ const levelButtons = document.getElementById("level-options");
 // Level selection text
 const levelSelectionText = document.getElementById("select-level-text");
 
-// Get the modal
-var modal = document.getElementById("correct-modal");
+// Get the modals
+var correctModal = document.getElementById("correct-modal");
+var incorrectModal = document.getElementById("incorrect-modal");
+var modal = document.getElementsByClassName("modal");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -422,31 +424,34 @@ choices.forEach(function (choice) {
 
         // if function that displays an alert for right and wrong answers
         if (selectedAnswer == currentQuestion.answer) {
-            modal.style.display = "block";
+            correctModal.style.display = "block";
             score++;
         } else {
-            modal.style.display = "block";
+            incorrectModal.style.display = "block";
         }
         incrementScore();
         getNewQuestion();
     });
 });
 
-// When the user clicks the button, open the modal 
-choices.onclick = function() {
-  modal.style.display = "block";
-}
-
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+span.onclick = function () {
+    correctModal.style.display = "none";
+};
+span.onclick = function () {
+    incorrectModal.style.display = "none";
+};
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+window.onclick = function (event) {
+    if (event.target == correctModal) {
+        correctModal.style.display = "none";
+    }
+};
+window.onclick = function (event) {
+    if (event.target == incorrectModal) {
+        incorrectModal.style.display = "none";
+    }
+};
 
 startEasyGame();
