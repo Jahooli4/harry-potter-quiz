@@ -275,6 +275,7 @@ let difficultQuestions = [{
         choice3: "Aberforth",
         choice4: "Alaric",
         answer: 3,
+        trivia: "There were originally 3 Dunbledore siblings; Albus, Aberforth and Ariana.",
     },
     {
         question: "Which Weasley brother does Fleur Delacour marry?",
@@ -283,6 +284,7 @@ let difficultQuestions = [{
         choice3: "Charlie",
         choice4: "Percy",
         answer: 2,
+        trivia: "Fleur marries Bill in the 7th book.",
     },
     {
         question: "Which Ravenclaw trinket does Tom Riddle turn into a horcrux?",
@@ -291,14 +293,16 @@ let difficultQuestions = [{
         choice3: "A diadem",
         choice4: "A diamond",
         answer: 3,
+        trivia: "Voldemort persuades the ghost of Ravenclaw to tell him the whereabouts of the long lost diadem. The tiara is said to grant wisdom to the wearer.",
     },
     {
         question: "Which of these is not a method for destroying horcruxes?",
         choice1: "Godric Gryffindor's sword",
-        choice2: "Feindfyre",
+        choice2: "Fiendfyre",
         choice3: "Basilisk venom",
         choice4: "Dragon flame",
         answer: 4,
+        trivia: "Dragon flame is never used to destroy a Horcrux, however Fiendfyre is a cursed flame with enough power to destroy nearly anything in it's path.",
     },
     {
         question: "Who is the half blood prince?",
@@ -307,6 +311,7 @@ let difficultQuestions = [{
         choice3: "Severus Snape",
         choice4: "James Potter",
         answer: 3,
+        trivia: "The half blood prince is none other than Severus Snape. Harry comes to posess an old potions book of his and as a result excels at his potions classes that year.",
     },
     {
         question: "Xenophilius Lovegood is the editor of which newspaper?",
@@ -315,6 +320,7 @@ let difficultQuestions = [{
         choice3: "The Wizards Voice",
         choice4: "The Hogwarts Herald",
         answer: 2,
+        trivia: "The Quibbler is owned, printed and edited by Luna Lovegood's father, Xenophilius.",
     },
     {
         question: "How many siblings does Ron Weasley have?",
@@ -323,6 +329,7 @@ let difficultQuestions = [{
         choice3: "6",
         choice4: "7",
         answer: 3,
+        trivia: "Ron's 6 siblings are as follows: Bill, Charlie, Percy, Fred, George and Ginny Weasley. Charlie Weasley is never featured in the films, though he is mentioned.",
     },
     {
         question: "Which of these objects is not a Deathly Hallow?",
@@ -331,6 +338,7 @@ let difficultQuestions = [{
         choice3: "Marvolo Gaunt's ring",
         choice4: "The invisibility cloak",
         answer: 1,
+        trivia: "The deluminator is an invention of Albus Dumbledor and not a Deathly Hallow.",
     },
     {
         question: "What are the last 3 words of Harry Potter and the Deathly Hallows?",
@@ -339,6 +347,7 @@ let difficultQuestions = [{
         choice3: "No, he said.",
         choice4: "All was well.",
         answer: 4,
+        trivia: "'The scar had not pained Harry for 19 years. All was well.'",
     },
     {
         question: "Which of these characters is not an animagus?",
@@ -347,6 +356,7 @@ let difficultQuestions = [{
         choice3: "Rita Skeeter",
         choice4: "Fenrir Greyback",
         answer: 4,
+        trivia: "Fenrir Greyback is in fact a werewolf and not an animagus. Minerva McGonagall has the ability to transform into a cat, Rita Skeeter a beetle, and James Potter a stag.",
     },
 ];
 
