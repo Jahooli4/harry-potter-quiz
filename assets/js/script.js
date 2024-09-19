@@ -181,7 +181,7 @@ let mediumQuestions = [{
         choice3: "A moose",
         choice4: "A doe",
         answer: 2,
-        
+        trivia: "His patronus takes the form of a stag, the same as his father",
     },
     {
         question: "What is the Hogwarts poltergeist called?",
@@ -190,6 +190,7 @@ let mediumQuestions = [{
         choice3: "Pesky",
         choice4: "Pablo",
         answer: 1,
+        trivia: "Peeves is one of the few characters that never appears in the films! In the books he notoriously causes trouble whenever he can.",
     },
     {
         question: "What is the name of Voldemort's father?",
@@ -198,6 +199,7 @@ let mediumQuestions = [{
         choice3: "Ted Riddle",
         choice4: "Tim Riddle",
         answer: 2,
+        trivia: "Voldemort and his father share the same name, Tom Riddle.",
     },
     {
         question: "Which quidditch team does Viktor Krum play for?",
@@ -206,6 +208,7 @@ let mediumQuestions = [{
         choice3: "Serbia",
         choice4: "Bulgaria",
         answer: 4,
+        trivia: "Krum plays for Bulgaria! He also dated Hermione for a while.",
     },
     {
         question: "What was Sirius Black's nickname at Hogwarts?",
@@ -214,6 +217,7 @@ let mediumQuestions = [{
         choice3: "Prongs",
         choice4: "Wormtail",
         answer: 2,
+        trivia: "Sirius' nickname Padfoot comes from his animagus form as a big dog.",
     },
     {
         question: "Which spell would you use to summon an object?",
@@ -222,6 +226,7 @@ let mediumQuestions = [{
         choice3: "Episkey",
         choice4: "Accio",
         answer: 4,
+        trivia: "With help from Hermione, Harry masters the Accio charm just in time to use it to summon his broom during the dragon task in the Triwizard tournament.",
     },
     {
         question: "Fred and George Weasley play which positions on the Hogwarts quidditch team?",
@@ -230,6 +235,7 @@ let mediumQuestions = [{
         choice3: "Beaters",
         choice4: "They aren't on the team!",
         answer: 3,
+        trivia: "It was said that Fred and George were the best beaters the Gryffindor team had seen.",
     },
     {
         question: "Ron's pet rat turns out to be who?",
@@ -238,6 +244,7 @@ let mediumQuestions = [{
         choice3: "Sirius Black",
         choice4: "Padma Patil",
         answer: 1,
+        trivia: "Harry discovers Ron's rat to be Peter Pettigrew after spotting him on the Marauder's map",
     },
     {
         question: "In The Goblet of Fire, Snape wrongly accuses Harry of stealing what from him?",
@@ -246,14 +253,16 @@ let mediumQuestions = [{
         choice3: "Veritaserum",
         choice4: "Polyjuice potion ingredients",
         answer: 4,
+        trivia: "Based on their track record Snape assumes Harry has stolen Polyjuice potion ingredients from him, however it was Barty Crouch Jnr in the guise of Professor Moody.",
     },
     {
         question: "Professor Karkaroff used to be what?",
         choice1: "A werewolf",
-        choice2: "A deatheater",
-        choice3: "A Horwarts student",
+        choice2: "A Deatheater",
+        choice3: "A Hogwarts student",
         choice4: "An auror",
         answer: 2,
+        trivia: "Professor Karkaroff is a well known ex Deatheater, he earned his freedom by handing over inside information to the Ministry of Magic.",
     },
 ];
 
