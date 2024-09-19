@@ -1,4 +1,4 @@
-// Variables pulled from html
+// Page and title variables
 const home = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const endGamePage = document.getElementById("end-game-page");
@@ -7,7 +7,7 @@ const pageTitle = document.getElementById("page-title");
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const levelTitle = document.getElementById('level-title');
-
+// Final score and finish message
 let finishMessage = document.getElementById("finish-message");
 let finalScore = document.getElementById("total-score");
 
@@ -27,6 +27,12 @@ const levelButtons = document.getElementById("level-options");
 
 // Level selection text
 const levelSelectionText = document.getElementById("select-level-text");
+
+// Get the modal
+var modal = document.getElementById("correct-modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
 // Variables for the get new question function
 let currentQuestion = {};
@@ -327,7 +333,6 @@ function showQuiz() {
 }
 
 // Displays the quiz page when the easy level button is clicked
-
 easyBtn.addEventListener("click", showQuiz);
 
 // function to start the game from the beginning, resets score and question 
@@ -354,7 +359,6 @@ mediumBtn.addEventListener("click", startMediumGame = () => {
 });
 
 // Displays the quiz page when the difficult level button is clicked
-
 difficultBtn.addEventListener("click", showQuiz);
 
 // // function to start the game from the beginning, resets score and question 
@@ -366,6 +370,7 @@ difficultBtn.addEventListener("click", startDifficultGame = () => {
     getNewQuestion();
     levelTitle.innerText = "Level: DIFFICULT";
 });
+
 
 // Function to display endgame message and total score once the quiz is complete
 function endGame() {
@@ -417,14 +422,31 @@ choices.forEach(function (choice) {
 
         // if function that displays an alert for right and wrong answers
         if (selectedAnswer == currentQuestion.answer) {
-            alert("Well done, that's the right answer!");
+            modal.style.display = "block";
             score++;
         } else {
-            alert("Oops that's not quite right");
+            modal.style.display = "block";
         }
         incrementScore();
         getNewQuestion();
     });
 });
+
+// When the user clicks the button, open the modal 
+choices.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 startEasyGame();
