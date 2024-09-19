@@ -213,77 +213,128 @@ body {
 }
 
 /* The Modal (background) */
-#correct-modal, #incorrect-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+#correct-modal,
+#incorrect-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
 
-  /* Modal Content */
-  #correct-modal-content, #incorrect-modal-content {
+
+/* Modal Content */
+#correct-modal-content,
+#incorrect-modal-content {
     width: 60%;
-  }
-  .modal-content {
+    border-radius: 25px;
+}
+
+.modal-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
-  }
-  
-  /* Add Animation */
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.correct-close, .incorrect-close {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.incorrect-close:hover,
+.incorrect-close:focus {
     color: #fafafa;
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  .modal-header {
-    padding: 2px 16px;
-    background-color: purple;
+}
+
+.correct-close:hover,
+.correct-close:focus {
     color: #fafafa;
-  }
-  
-  .modal-body {padding: 2px 16px;}
-  
-  .modal-footer {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.correct-modal-header {
     padding: 2px 16px;
-    background-color: purple;
+    background-color: green;
     color: #fafafa;
-  }
+}
+
+.incorrect-modal-header {
+    background-color: #bd1717;
+}
+.incorrect-modal-header p {
+    color: #fafafa;
+    padding: 10px;
+}
+.modal-body {
+    padding: 2px 16px;
+}
+
+.correct-modal-footer, .incorrect-modal-footer {
+    padding: 2px 16px;
+}
+
+.correct-modal-footer {
+    background-color: green;
+}
+
+.incorrect-modal-footer {
+    background-color: #bd1717;
+}
+
+.correct-modal-footer p, .incorrect-modal-footer p {
+  color: #fafafa;
+}
 
 /* End game page to display finish message and total score */
 #end-game-page {

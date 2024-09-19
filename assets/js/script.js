@@ -32,6 +32,9 @@ const levelSelectionText = document.getElementById("select-level-text");
 var correctModal = document.getElementById("correct-modal");
 var incorrectModal = document.getElementById("incorrect-modal");
 
+// right answer text for incorrect modal
+var rightAnswer = document.getElementById("right-answer");
+
 // Get the <span> element that closes the modal
 var correctClose = document.getElementsByClassName("correct-close")[0];
 var incorrectClose = document.getElementsByClassName("incorrect-close")[0];
@@ -85,6 +88,7 @@ let easyQuestions = [{
         choice3: "Gryffindor",
         choice4: "Hufflepuff",
         answer: 3,
+        trivia: "The sorting hat originally wanted to put Harry in Slytherin but he chose Gryffindor.",
     },
     {
         question: "The juice of which fruit or vegetable is commonly served at Hogwarts?",
@@ -93,6 +97,7 @@ let easyQuestions = [{
         choice3: "Orange",
         choice4: "Pumpkin",
         answer: 4,
+        trivia: "It's pumpkin ofcourse! Freshly grown in Hagrid's pumpkin patch.",
     },
     {
         question: "Neville Longbottom can often be found looking for what sort of pet?",
@@ -101,6 +106,7 @@ let easyQuestions = [{
         choice3: "Rat",
         choice4: "Toad",
         answer: 4,
+        trivia: "Neville has a pet toad and his name is Trevor.",
     },
     {
         question: "Ron Weasley is very good at which game?",
@@ -109,6 +115,7 @@ let easyQuestions = [{
         choice3: "Chess",
         choice4: "Boggle",
         answer: 3,
+        trivia: "The answer is ofcourse: chess! Ron plays the best game of chess Hogwarts has ever seen in The Philosopher's Stone.",
     },
     {
         question: "Hermione's parents are described as what?",
@@ -117,6 +124,7 @@ let easyQuestions = [{
         choice3: "Old",
         choice4: "Gnomes",
         answer: 2,
+        trivia: "Hermione is muggle born, this means her parents are non magical folk.",
     },
     {
         question: "What sort of pet has Hagrid always wanted?",
@@ -125,6 +133,7 @@ let easyQuestions = [{
         choice3: "A unicorn",
         choice4: "A dragon",
         answer: 4,
+        trivia: "Hagrid is well known for having a soft spot for all creatures, the more dangerous the better. Dragons are his favourite!",
     },
     {
         question: "Professor Snape is head of which Hogwarts house?",
@@ -133,6 +142,7 @@ let easyQuestions = [{
         choice3: "Gryffindor",
         choice4: "Hufflepuff",
         answer: 2,
+        trivia: "Snape is head of the Slytherin house, the same house he himself was in when he atttended the school.",
     },
     {
         question: "Professor Quirrell wears what sort of headwear?",
@@ -141,6 +151,7 @@ let easyQuestions = [{
         choice3: "A turban",
         choice4: "A swimming cap",
         answer: 3,
+        trivia: "Quirell's turban was an object of intrigue for many students, until it turned out he was hiding Voldemort underneath!",
     },
     {
         question: "Harry can talk to what kind of animals?",
@@ -149,6 +160,7 @@ let easyQuestions = [{
         choice3: "Dolphins",
         choice4: "Crows",
         answer: 1,
+        trivia: "Harry's ability to talk to snakes means he is a 'Parselmouth'.",
     },
     {
         question: "What sort of creature is Dobby?",
@@ -157,6 +169,7 @@ let easyQuestions = [{
         choice3: "House elf",
         choice4: "Dementor",
         answer: 3,
+        trivia: "Dobby is a house elf who makes it his mission to save Harry Potter's life in The Chamber of Secrets, however he doesn't always go about this in the best way!",
     },
 ];
 
@@ -428,6 +441,7 @@ choices.forEach(function (choice) {
             score++;
         } else {
             incorrectModal.style.display = "block";
+            rightAnswer.innerText = `${currentQuestion.trivia}`
         }
         incrementScore();
         getNewQuestion();
