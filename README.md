@@ -210,6 +210,15 @@ I sent my website to 5 users and asked them to complete the following tasks:
 
 ![Bug screenshot](assets/images/readme/bug-screenshot.png)
 
+> - The hero image would load on my Github port but not on the live site.
+> - The only fix I could come up with was to put the hero image file in the root folder, not sure if this is because I'm loading it via css and not html.
+
+![Bug screenshot](assets/images/readme/bug2-screenshot.png)
+
+> - Correct answer modal won't close when screen is clicked, but the incorrect will despite being the same code.
+
+![Bug screenshot](assets/images/readme/bug3-screenshot.png)
+
 ## Deployment
 
 The steps to deploy the project are as follows:
@@ -239,7 +248,9 @@ The steps to deploy the project are as follows:
 > - Fonts sourced from Google Fonts: (https://fonts.google.com/selection/embed)
 > - Am I responsive screenshots for Readme: (https://ui.dev/amiresponsive)
 > - Social media icons sourced from Font awesome: (https://fontawesome.com/icons)
-> - Favicon: (https://favicon.io/emoji-favicons/crescent-moon/)
+> - Favicon: (https://favicon.io/emoji-favicons/)
+> - Harry Potter content inspiration: https://harrypotter.fandom.com/wiki/Wizarding_idioms
+> - Modal popup: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
 
 #### Acknowledgments: 
 Thank you to my mentor Alan Bushell for his advice and feedback during the project.

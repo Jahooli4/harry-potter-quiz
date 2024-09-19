@@ -181,6 +181,7 @@ let mediumQuestions = [{
         choice3: "A moose",
         choice4: "A doe",
         answer: 2,
+        
     },
     {
         question: "What is the Hogwarts poltergeist called?",
