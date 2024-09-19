@@ -216,31 +216,22 @@ body {
 #correct-modal,
 #incorrect-modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     padding-top: 100px;
-    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
 }
-
 
 /* Modal Content */
 #correct-modal-content,
 #incorrect-modal-content {
     width: 60%;
-    border-radius: 25px;
 }
 
 .modal-content {
@@ -282,7 +273,8 @@ body {
 }
 
 /* The Close Button */
-.correct-close, .incorrect-close {
+.correct-close,
+.incorrect-close {
     color: white;
     float: right;
     font-size: 28px;
@@ -303,37 +295,34 @@ body {
     cursor: pointer;
 }
 
-.correct-modal-header {
-    padding: 2px 16px;
-    background-color: green;
-    color: #fafafa;
-}
-
-.incorrect-modal-header {
-    background-color: #bd1717;
-}
-.incorrect-modal-header p {
+.correct-modal-header p {
     color: #fafafa;
     padding: 10px;
 }
-.modal-body {
-    padding: 2px 16px;
-}
 
-.correct-modal-footer, .incorrect-modal-footer {
-    padding: 2px 16px;
-}
-
-.correct-modal-footer {
-    background-color: green;
-}
-
+.incorrect-modal-header,
 .incorrect-modal-footer {
     background-color: #bd1717;
 }
 
-.correct-modal-footer p, .incorrect-modal-footer p {
-  color: #fafafa;
+.incorrect-modal-header p {
+    color: #fafafa;
+    padding: 10px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.correct-modal-footer,
+.correct-modal-header {
+    background-color: green;
+}
+
+.correct-modal-footer p,
+.incorrect-modal-footer p {
+    color: #fafafa;
+    padding: 10px;
 }
 
 /* End game page to display finish message and total score */

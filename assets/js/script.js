@@ -33,7 +33,8 @@ var correctModal = document.getElementById("correct-modal");
 var incorrectModal = document.getElementById("incorrect-modal");
 
 // right answer text for incorrect modal
-var rightAnswer = document.getElementById("right-answer");
+var trivia = document.getElementById("trivia");
+var trivia2 = document.getElementById("trivia2");
 
 // Get the <span> element that closes the modal
 var correctClose = document.getElementsByClassName("correct-close")[0];
@@ -458,10 +459,11 @@ choices.forEach(function (choice) {
         // if function that displays an alert for right and wrong answers
         if (selectedAnswer == currentQuestion.answer) {
             correctModal.style.display = "block";
+            trivia.innerText = `${currentQuestion.trivia}`;
             score++;
         } else {
             incorrectModal.style.display = "block";
-            rightAnswer.innerText = `${currentQuestion.trivia}`
+            trivia2.innerText = `${currentQuestion.trivia}`;
         }
         incrementScore();
         getNewQuestion();
