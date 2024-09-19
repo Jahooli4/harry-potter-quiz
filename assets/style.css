@@ -230,7 +230,7 @@ body {
 
   /* Modal Content */
   #correct-modal-content, #incorrect-modal-content {
-    width: 70%;
+    width: 60%;
   }
   .modal-content {
     position: relative;
@@ -266,7 +266,7 @@ body {
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: #fafafa;
     text-decoration: none;
     cursor: pointer;
   }

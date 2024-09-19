@@ -31,10 +31,10 @@ const levelSelectionText = document.getElementById("select-level-text");
 // Get the modals
 var correctModal = document.getElementById("correct-modal");
 var incorrectModal = document.getElementById("incorrect-modal");
-var modal = document.getElementsByClassName("modal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var correctClose = document.getElementsByClassName("correct-close")[0];
+var incorrectClose = document.getElementsByClassName("incorrect-close")[0];
 
 // Variables for the get new question function
 let currentQuestion = {};
@@ -435,10 +435,11 @@ choices.forEach(function (choice) {
 });
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+correctClose.onclick = function () {
     correctModal.style.display = "none";
 };
-span.onclick = function () {
+
+incorrectClose.onclick = function () {
     incorrectModal.style.display = "none";
 };
 
@@ -448,6 +449,7 @@ window.onclick = function (event) {
         correctModal.style.display = "none";
     }
 };
+
 window.onclick = function (event) {
     if (event.target == incorrectModal) {
         incorrectModal.style.display = "none";
