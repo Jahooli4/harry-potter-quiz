@@ -29,6 +29,7 @@ The user can then select from three levels of difficulty: easy, medium or diffic
 
 ### Scope Plane
   > - The website should have a link to the home page visible at all times so the user can reset the quiz without using browser navigation buttons.
+  > - The website should not allow user to return to previous question as they will have already been shown the correct answer.
   > - The website should have a welcome message for the user that concisely describes the purpose of the site.
   > - The website should be visually appealing to the user and be styled in a way that is relevant to the Harry Potter theme.
   > - The website background should change colour when the user selects their house.
@@ -120,6 +121,11 @@ After user has selected an answer, the alert box appears to let user knopw wheth
 
 ![Alert screenshot](assets/images/readme/alert-screenshot.png)
 
+UPDATE: I wasn't happy with the visual aspect of the alert box as I couldn't add any stying, so instead have added a modal pop-up that is more inkeeping with the site theme. I have also added a trivia element that pulls the relevent fact from the questions array.
+
+![Modal pop-up screenshot](assets/images/readme/modal-incorrect.png)
+![Modal pop-up screenshot](assets/images/readme/modal-correct.png)
+
 > - Endgame page 
 
 After 10 questions in any of the levels, the user's score is displayed with the relevent message based on how well they did.
@@ -169,6 +175,7 @@ Minimal in design so as not to distract from the main quiz. I have included basi
 | Home page - Level selection buttons | Click each level button. | The quiz should begin on the relevant difficulty selected with the correct level title and questions. | PASS |
 | Quiz page - Questions | Play quiz the whole way through each level. | Questions should be randomly generated and relevant to the level selected. No repeated questions. | PASS |
 | Quiz page - Answer buttons | Hover mouse over buttons/Tap on mobile device. | Buttons should highlight when hovered and select the answer when clicked. New question should then be generated. | PASS |
+| Quiz page - Modal | After modal pops up click the close button or anywhere on screen. | Modal should dissapear and next question load. | PASS (correct answer modal doesn't disappear on window click, only close button. See: bugs) |
 | Quiz page - UX | Read through every question. | Text should all be clear and easily readable and the questions make sense. | PASS|
 | Quiz page - score/question counter | Play quiz whole way through on each level. | Score should incrememnt by 1 for every correct answer and the question counter increment by 1 for every new question. | PASS |
 | Footer - Social media icons | Click each one, test on each page. | Each link should change colour when hovered over and open in a new tab when clicked. | PASS |
