@@ -425,9 +425,7 @@ function endGame() {
 
 // Function to select a random question + choices from the easyQuestions array
 getNewQuestion = () => {
-    if (availableQuestions.length === 0) {
-        endGame();
-    } else {
+    if (availableQuestions.length > 0) {
         questionCounter++;
         const questionIndex = Math.floor(Math.random() * availableQuestions.length);
         currentQuestion = availableQuestions[questionIndex];
@@ -439,7 +437,10 @@ getNewQuestion = () => {
         });
         availableQuestions.splice(questionIndex, 1);
         acceptingAnswers = true;
+    } else {
+        endGame();
     }
+    
 };
 
 // Function to increment the score value during the quiz

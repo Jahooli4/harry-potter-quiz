@@ -130,7 +130,7 @@ body {
 
 /* Hero background image */
 #hero-image {
-    background: purple url("hero_image.jpg") no-repeat center;
+    background: purple url("../images/hero_image.jpg") no-repeat center;
     height: 80vh;
     overflow: hidden;
     width: 80%;
@@ -279,6 +279,7 @@ body {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    padding: 5px;
 }
 
 .incorrect-close:hover,
