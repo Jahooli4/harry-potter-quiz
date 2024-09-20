@@ -3,9 +3,10 @@ const home = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const endGamePage = document.getElementById("end-game-page");
 const pageTitle = document.getElementById("page-title");
-const question = document.getElementById('question-text');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
-const levelTitle = document.getElementById('level-title');
+const question = document.getElementById("question-text");
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+const levelTitle = document.getElementById("level-title");
+const copyright = document.getElementsByClassName("copyright")[0];
 // Final score and finish message
 let finishMessage = document.getElementById("finish-message");
 let finalScore = document.getElementById("total-score");
@@ -54,6 +55,8 @@ hufflepuffBtn.addEventListener('click', function (event) {
     levelSelectionText.style.display = "block";
     levelButtons.style.display = "block";
     endGamePage.style.backgroundColor = "#198754";
+    copyright.style.color = "#fafafa";
+    socialLinks();
     // Page title hover effect - reverts back to house colours on mouse leave
     pageTitle.onmouseleave = function hufflepuffTitle() {
         pageTitle.style.color = "#000000";
@@ -67,6 +70,8 @@ ravenclawBtn.addEventListener('click', function (event) {
     levelSelectionText.style.display = "block";
     levelButtons.style.display = "block";
     houseBanner.style.display = "none";
+    copyright.style.color = "#fafafa";
+    socialLinks();
     // Page title hover effect - reverts back to house colours on mouse leave
     pageTitle.onmouseleave = function ravenclawTitle() {
         pageTitle.style.color = "gold";
@@ -80,6 +85,8 @@ gryffindorBtn.addEventListener('click', function (event) {
     levelSelectionText.style.display = "block";
     levelButtons.style.display = "block";
     houseBanner.style.display = "none";
+    copyright.style.color = "#fafafa";
+    socialLinks();
     // Page title hover effect - reverts back to house colours on mouse leave
     pageTitle.onmouseleave = function gryffindorTitle() {
         pageTitle.style.color = "gold";
@@ -93,12 +100,19 @@ slytherinBtn.addEventListener('click', function (event) {
     levelSelectionText.style.display = "block";
     levelButtons.style.display = "block";
     houseBanner.style.display = "none";
+    copyright.style.color = "#fafafa";
+    socialLinks();
     // Page title hover effect - reverts back to house colours on mouse leave
     pageTitle.onmouseleave = function slytherinTitle() {
         pageTitle.style.color = "silver";
         pageTitle.style.backgroundColor = "unset";
     };
 });
+
+// function to change social links color
+function socialLinks() {
+    document.querySelectorAll('i').forEach(e => e.style.color = "#fafafa");
+}
 
 // Functions to add hover effect to the title
 pageTitle.onmouseover = function titleHover() {
