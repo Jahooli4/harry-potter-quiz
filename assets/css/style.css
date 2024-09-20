@@ -32,6 +32,10 @@ body {
     color: purple;
     -webkit-text-stroke: 1px black;
     padding: 10px;
+    max-width: fit-content;
+    border-radius: 25px;
+    margin: 5px auto 10px auto;
+    padding: 5px 10px 5px 10px;
 }
 
 /* Home page section */

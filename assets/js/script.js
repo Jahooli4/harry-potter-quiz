@@ -54,6 +54,11 @@ hufflepuffBtn.addEventListener('click', function (event) {
     levelSelectionText.style.display = "block";
     levelButtons.style.display = "block";
     endGamePage.style.backgroundColor = "#198754";
+    // Page title hover effect - reverts back to house colours on mouse leave
+    pageTitle.onmouseleave = function hufflepuffTitle() {
+        pageTitle.style.color = "#000000";
+        pageTitle.style.backgroundColor = "unset";
+    };
 });
 
 ravenclawBtn.addEventListener('click', function (event) {
@@ -62,6 +67,11 @@ ravenclawBtn.addEventListener('click', function (event) {
     levelSelectionText.style.display = "block";
     levelButtons.style.display = "block";
     houseBanner.style.display = "none";
+    // Page title hover effect - reverts back to house colours on mouse leave
+    pageTitle.onmouseleave = function ravenclawTitle() {
+        pageTitle.style.color = "gold";
+        pageTitle.style.backgroundColor = "unset";
+    };
 });
 
 gryffindorBtn.addEventListener('click', function (event) {
@@ -70,6 +80,11 @@ gryffindorBtn.addEventListener('click', function (event) {
     levelSelectionText.style.display = "block";
     levelButtons.style.display = "block";
     houseBanner.style.display = "none";
+    // Page title hover effect - reverts back to house colours on mouse leave
+    pageTitle.onmouseleave = function gryffindorTitle() {
+        pageTitle.style.color = "gold";
+        pageTitle.style.backgroundColor = "unset";
+    };
 });
 
 slytherinBtn.addEventListener('click', function (event) {
@@ -78,7 +93,23 @@ slytherinBtn.addEventListener('click', function (event) {
     levelSelectionText.style.display = "block";
     levelButtons.style.display = "block";
     houseBanner.style.display = "none";
+    // Page title hover effect - reverts back to house colours on mouse leave
+    pageTitle.onmouseleave = function slytherinTitle() {
+        pageTitle.style.color = "silver";
+        pageTitle.style.backgroundColor = "unset";
+    };
 });
+
+// Functions to add hover effect to the title
+pageTitle.onmouseover = function titleHover() {
+    pageTitle.style.color = "gold";
+    pageTitle.style.backgroundColor = "purple";
+};
+
+pageTitle.onmouseleave = function revertTitle() {
+    pageTitle.style.color = "purple";
+    pageTitle.style.backgroundColor = "unset";
+};
 
 // Questions for the easy level
 let easyQuestions = [{
