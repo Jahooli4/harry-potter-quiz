@@ -216,8 +216,16 @@ I sent my website to 5 users and asked them to complete the following tasks:
 ![Bug screenshot](assets/images/readme/bug2-screenshot.png)
 
 > - Correct answer modal won't close when screen is clicked, but the incorrect will despite being the same code.
+> - Since the 'x' close button still functions perfectly I have decided to move on from this and document it as a future fix.
 
 ![Bug screenshot](assets/images/readme/bug3-screenshot.png)
+
+### Existing bug: 
+> - The correct/incorrect answer modal fails to pop up on the last question. Instead the quiz skips straight to the end-game page. 
+> - Attempted fix: I tried reversing my if function so the js runs the endGame() function last instead of first.
+> - Possible fix: Instead of "if (availableQuestions.length > 0)" I think some variation of "if (currentQuestion <= 10)" might work but due to time contraints I have not had time to play with this as an idea.
+
+![Bug screenshot](assets/images/readme/bug4-screenshot.png)
 
 ## Deployment
 

@@ -3,7 +3,6 @@ const home = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const endGamePage = document.getElementById("end-game-page");
 const pageTitle = document.getElementById("page-title");
-
 const question = document.getElementById('question-text');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const levelTitle = document.getElementById('level-title');
@@ -267,7 +266,6 @@ let mediumQuestions = [{
     },
 ];
 
-
 // Questions for the difficult level
 let difficultQuestions = [{
         question: "What is the name of Albus Dumbledore's brother?",
@@ -430,7 +428,6 @@ getNewQuestion = () => {
         const questionIndex = Math.floor(Math.random() * availableQuestions.length);
         currentQuestion = availableQuestions[questionIndex];
         question.innerText = currentQuestion.question;
-
         choices.forEach((choice) => {
             const number = choice.dataset["number"];
             choice.innerText = currentQuestion["choice" + number];
@@ -440,7 +437,6 @@ getNewQuestion = () => {
     } else {
         endGame();
     }
-    
 };
 
 // Function to increment the score value during the quiz
